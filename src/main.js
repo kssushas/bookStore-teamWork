@@ -1,3 +1,3 @@
-import '/js/header'
-import '/js/allcategories'
-import '/js/modal'
+import '/js/header.js'
+import '/js/allcategories.js'
+import '/js/modal.js'
