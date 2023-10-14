@@ -1,12 +1,11 @@
 
 @import url('./reset.css');
-
 @import url('./header.css');
 @import url('./allcategories.css');
 @import url('./support.css');
 @import url('./allcategories.css');
 @import url('./anchor.css');
-
+@import url('./loader.css');
 :root {
   /* Fonts */
   --primary-font: DM Sans, sans-serif;
