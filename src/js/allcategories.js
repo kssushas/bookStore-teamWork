@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { forModal } from './modal';
 
 const list = document.querySelector('.js-list');
 
@@ -153,29 +154,34 @@ topFive();
 
 //---------------------------------------------------------------//
 
-const modal = document.querySelector('.modal');
+// const modal = document.querySelector('.modal');
 
+// listOfBookFromCategory.addEventListener('click', e => {
+//   const touch = e.target.closest('li');
+//   const touchId = touch.dataset.id;
+
+//   async function forModal() {
+//     const result = axios.get(`${touchId}`);
+//     const resultVal = await result.then(data => data.data);
+//     const modalMake = makeModal(resultVal);
+//     modal.innerHTML = modalMake;
+//   }
+
+//   forModal();
+// });
+
+// // ============================================================ //
+// function makeModal(val) {
+//   return `<h1>MODAL</h1>
+//   <img src=${val.book_image}>
+//   <h2>${val.title}</h2>
+//   <h3>${val.author}</h3>
+//   <h4>${val.contibutor}</h4>
+//   <button type="button" class="js-add"> add </button>
+//   `;
+// }
 listOfBookFromCategory.addEventListener('click', e => {
   const touch = e.target.closest('li');
   const touchId = touch.dataset.id;
-
-  async function forModal() {
-    const result = axios.get(`${touchId}`);
-    const resultVal = await result.then(data => data.data);
-    const modalMake = makeModal(resultVal);
-    modal.innerHTML = modalMake;
-  }
-
-  forModal();
+  forModal(touchId);
 });
-
-// ============================================================ //
-function makeModal(val) {
-  return `<h1>MODAL</h1>
-  <img src=${val.book_image}>
-  <h2>${val.title}</h2>
-  <h3>${val.author}</h3>
-  <h4>${val.contibutor}</h4>
-  <button type="button" class="js-add"> add </button>
-  `;
-}

@@ -1,4 +1,11 @@
-// import axios from 'axios';
+import axios from 'axios';
+
+axios.defaults.baseURL = 'https://books-backend.p.goit.global/books/';
+export async function serviceModal(touchId) {
+  const responce = await axios.get(`${touchId}`);
+  return await responce.data; 
+}
+
 
 // const list = document.querySelector('.js-list');
 
@@ -113,28 +120,28 @@
 //===========================================================//
 //===========================================================//
 //===========================================================//
-list.addEventListener('click', e => {
-  const nameOfCategory = e.target.textContent;
-  if (nameOfCategory === 'All categories') {
-    topFive();
-  }
-});
+// list.addEventListener('click', e => {
+//   const nameOfCategory = e.target.textContent;
+//   if (nameOfCategory === 'All categories') {
+//     topFive();
+//   }
+// });
 
-function markupAllCategories() {
-  return `     <li class="list-Elem" data-target="All categories">All categories</li> 
-`;
-}
-list.insertAdjacentHTML('afterbegin', markupAllCategories());
-markupAllCategories();
+// function markupAllCategories() {
+//   return `     <li class="list-Elem" data-target="All categories">All categories</li> 
+// `;
+// }
+// list.insertAdjacentHTML('afterbegin', markupAllCategories());
+// markupAllCategories();
 
-function tabClick(evt) {
-  let tabs = document.getElementsByClassName('list-Elem');
-  let listTabs = Array.from(tabs);
+// function tabClick(evt) {
+//   let tabs = document.getElementsByClassName('list-Elem');
+//   let listTabs = Array.from(tabs);
 
-  for (let i = 0; i < listTabs.length; i++) {
-    listTabs[i].classList.remove('chose');
-  }
-  evt.target.classList.add('chose');
-}
+//   for (let i = 0; i < listTabs.length; i++) {
+//     listTabs[i].classList.remove('chose');
+//   }
+//   evt.target.classList.add('chose');
+// }
 
-list.addEventListener('click', tabClick);
+// list.addEventListener('click', tabClick);

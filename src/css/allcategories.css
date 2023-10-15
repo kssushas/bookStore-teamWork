@@ -1,5 +1,26 @@
 .wrapper {
   display: flex;
+  background: #fff;
+  width: 1440px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.sidebar {
+  width: 370px;
+  /* background-color: #e0ebfe; */
+  padding: 0 20px 0 24px;
+}
+
+.listOfBookFromCategory {
+  width: 1060px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.list-top {
+  display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding: 40px 20px 80px 20px;
