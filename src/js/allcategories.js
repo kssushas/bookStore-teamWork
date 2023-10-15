@@ -67,9 +67,9 @@ function markupTopFive(val) {
   return val
     .map(element => {
       return element.map(
-        e => `<ul>
-               <li data-id="${e._id}"> 
-                 <img src="${e.book_image}" alt="">
+        e => `<ul class="list-top">
+               <li data-id="${e._id}" class="list-card"> 
+                 <img src="${e.book_image}" alt="" class="list-img">
                  <h1>${e.title}</h1>
                  <h2>${e.author}</h2>
                </li>             
