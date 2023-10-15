@@ -13,14 +13,6 @@ async function makeList() {
   list.insertAdjacentHTML('beforeend', markupLi);
 }
 
-function markup(val) {
-  return val
-    .map(element => {
-      return `<li class="list-Elem"  data-target="${element}">${element}</li>`;
-    })
-    .join('');
-}
-
 makeList();
 
 // ------------------------------------------------------------------ //
@@ -42,17 +34,6 @@ list.addEventListener('click', e => {
   makeRequest();
 });
 
-function markupBookOfcategory(val) {
-  return val
-    .map(elem => {
-      return `      <li>
-    <img src="${elem.book_image}" alt="" />
-    <h1>${elem.title}</h1>
-  </li>`;
-    })
-    .join('');
-}
-
 //-----------------------------------------------------//
 
 async function topFive() {
@@ -62,22 +43,6 @@ async function topFive() {
   const booksTopFive = dta.map(e => e);
   const markupForTopFive = markupTopFive(booksTopFive);
   listOfBookFromCategory.innerHTML = await markupForTopFive;
-}
-
-function markupTopFive(val) {
-  return val
-    .map(element => {
-      return element.map(
-        e => `<ul>
-               <li data-id="${e._id}"> 
-                 <img src="${e.book_image}" alt="">
-                 <h1>${e.title}</h1>
-                 <h2>${e.author}</h2>
-               </li>             
-              </ul>`
-      );
-    })
-    .join('');
 }
 
 topFive();
@@ -101,16 +66,6 @@ listOfBookFromCategory.addEventListener('click', e => {
 });
 
 // ============================================================ //
-function makeModal(val) {
-  return `<h1>MODAL</h1>
-  <img src=${val.book_image}>
-  <h2>${val.title}</h2>
-  <h3>${val.author}</h3>
-  <h4>${val.contibutor}</h4>
-  <button type="button" class="js-add"> add </button>
-  `;
-}
-
 //===========================================================//
 //===========================================================//
 //===========================================================//
