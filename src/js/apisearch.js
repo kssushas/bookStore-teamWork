@@ -8,6 +8,7 @@ async function makeList() {
   const result = axios.get('top-books');
   const resultVal = await result.then(data => data.data);
   const dta = await resultVal.map(val => val.list_name);
+  console.log(dta)
   const markupLi = markup(dta);
   list.insertAdjacentHTML('beforeend', markupLi);
 }
@@ -109,3 +110,33 @@ function makeModal(val) {
   <button type="button" class="js-add"> add </button>
   `;
 }
+
+//===========================================================//
+//===========================================================//
+//===========================================================//
+list.addEventListener('click', e => {
+  const nameOfCategory = e.target.textContent;
+  if (nameOfCategory === 'All categories') {
+    topFive();
+  }
+});
+
+function markupAllCategories() {
+  return `     <li class="list-Elem" data-target="All categories">All categories</li> 
+`;
+}
+list.insertAdjacentHTML('afterbegin', markupAllCategories());
+markupAllCategories();
+
+function tabClick(evt) {
+  let tabs = document.getElementsByClassName("list-Elem");
+  let listTabs = Array.from(tabs)
+
+  for (let i = 0; i < listTabs.length; i++) {
+    listTabs[i].classList.remove("chose");
+  }
+  evt.target.classList.add('chose');
+}
+
+list.addEventListener('click', tabClick)
+
