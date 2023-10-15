@@ -1,4 +1,5 @@
 import axios from 'axios';
+//Це Функція виклику модалки!!!
 import { forModal } from './modal';
 
 const list = document.querySelector('.js-list');
@@ -187,6 +188,9 @@ topFive();
 //   <button type="button" class="js-add"> add </button>
 //   `;
 // }
+
+
+// Це виклик модалки
 listOfBookFromCategory.addEventListener('click', e => {
   const touch = e.target.closest('li');
   const touchId = touch.dataset.id;
