@@ -58,25 +58,57 @@ async function topFive() {
   const result1 = axios.get('top-books');
   const resultVal1 = await result1.then(data => data.data);
   const dta = await resultVal1.map(e => e.books);
-  const booksTopFive = dta.map(e => e);
-  const markupForTopFive = markupTopFive(booksTopFive);
-  listOfBookFromCategory.innerHTML = await markupForTopFive;
+  console.log(dta);
+  // const booksTopFive = dta.map(e => e);
+  // console.log(booksTopFive);
+  for (let i = 0; i < dta.length; i++) {
+    let markupForTopFive = markupTopFive(dta[i]);
+    // console.log(markupForTopFive);
+    listOfBookFromCategory.insertAdjacentHTML('beforeend', markupForTopFive);
+  }
 }
 
+// const catName = document.querySelector('.cat');
+// console.log(catName.textContent);
+
+// async function topFive() {
+//   const result1 = axios.get('top-books');
+//   const resultVal1 = await result1.then(data => data.data);
+//   const dta = await resultVal1.map(e => e.books);
+
+//   function myFunc() {
+//     dta.map(val =>
+//       val.map(elm => {
+//         // console.log(elm.list_name);
+//         // console.log(catName.textContent)
+//         if (catName.textContent === elm.list_name) {
+//           // console.log(catName.textContent);
+//           const markupForTopFive = markupTopFive(val);
+//           listOfBookFromCategory.innerHTML = markupForTopFive;
+//         }
+//       })
+//     );
+//   }
+
+//   myFunc();
+// }
+
 function markupTopFive(val) {
-  return val
-    .map(element => {
-      return element.map(
-        e => `<ul class="list-top">
-               <li data-id="${e._id}" class="list-card"> 
+  // console.log(val);
+  // return val.map(element => {
+  // console.log(element);
+  return (
+    val
+      .map(
+        e => `<li data-id="${e._id}" class="list-card"> 
                  <img src="${e.book_image}" alt="" class="list-img">
-                 <h1>${e.title}</h1>
-                 <h2>${e.author}</h2>
-               </li>             
-              </ul>`
-      );
-    })
-    .join('');
+                 <h3>${e.title}</h3>
+                 <h4 class="autor">${e.author}</h4>
+               </li>`
+      )
+      // })
+      .join('')
+  );
 }
 
 topFive();
