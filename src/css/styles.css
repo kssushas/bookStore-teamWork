@@ -2,6 +2,7 @@
 @import url('./reset.css');
 
 @import url('./header.css');
+@import url('./bestsellers.css');
 @import url('./allcategories.css');
 @import url('./support.css');
 @import url('./allcategories.css');
@@ -23,6 +24,11 @@
   --orange-bg-cl: #EAC645;
   --black-bg-cl: #111111;
   --dark-bg-cl: #202024;
+
+  /* Annimations */
+  --anim-superfast: 150ms ease-in;
+  --anim-fast: 300ms ease-in;
+  --anim-slow: 800ms ease;
 }
 
 body {
