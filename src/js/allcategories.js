@@ -15,7 +15,7 @@ async function makeList() {
 function markup(val) {
   return val
     .map(element => {
-      return `<li class="list-Elem"  data-target="${element}">${element}</li>`;
+      return `<li class="list-elem"  data-target="${element}">${element}</li>`;
     })
     .join('');
 }
@@ -54,19 +54,28 @@ function markupBookOfcategory(val) {
 
 //-----------------------------------------------------//
 
-async function topFive() {
-  const result1 = axios.get('top-books');
-  const resultVal1 = await result1.then(data => data.data);
-  const dta = await resultVal1.map(e => e.books);
-  console.log(dta);
-  // const booksTopFive = dta.map(e => e);
-  // console.log(booksTopFive);
-  for (let i = 0; i < dta.length; i++) {
-    let markupForTopFive = markupTopFive(dta[i]);
-    // console.log(markupForTopFive);
-    listOfBookFromCategory.insertAdjacentHTML('beforeend', markupForTopFive);
-  }
-}
+// async function topFive() {
+//   const result1 = axios.get('top-books');
+
+//   const resultVal1 = await result1.then(data => data.data);
+// console.log(resultVal1);
+// const dta = awaFit resultVal1.map(e => e.books);
+// console.log(dta);
+// const booksTopFive = dta.last_name;
+// console.log(booksTopFive);
+// for (let i = 0; i < dta.length; i++) {
+//   let category;
+//   for (const data of dta[i]) {
+//     category = data.list_name;
+//   }
+// console.log(category);
+// console.log(dta[i]);
+
+// let markupForTopFive = markupTopFive(dta[i]);
+// console.log(markupForTopFive);
+//     listOfBookFromCategory.insertAdjacentHTML('beforeend', markupForTopFive);
+//   }
+// }
 
 // const catName = document.querySelector('.cat');
 // console.log(catName.textContent);
@@ -93,23 +102,52 @@ async function topFive() {
 //   myFunc();
 // }
 
-function markupTopFive(val) {
-  // console.log(val);
-  // return val.map(element => {
-  // console.log(element);
-  return (
-    val
-      .map(
-        e => `<li data-id="${e._id}" class="list-card"> 
-                 <img src="${e.book_image}" alt="" class="list-img">
-                 <h3>${e.title}</h3>
-                 <h4 class="autor">${e.author}</h4>
-               </li>`
-      )
-      // })
-      .join('')
+async function topFive() {
+  const result = axios.get('top-books');
+  const resultVal = await result.then(data =>
+    data.data.map(val => markupTopFive(val.list_name, val.books))
   );
 }
+
+function markupTopFive(category, arrBook) {
+  // console.log(arrBook);
+  // let titleSection = `<p class="title-section>${category}</h2>`;
+  const book = arrBook
+    .map(
+      elem => `<li class="list-card"> 
+                <img class="list-img" src="${elem.book_image}" alt="${elem._id}">
+                <div class="">
+                  <h3 class="list-title">${elem.title}</h3>
+                  <p class="autor">${elem.author}</p>
+                </div>   
+               </li>`
+    )
+    .join('');
+  // console.log(titleSection);
+  listOfBookFromCategory.insertAdjacentHTML(
+    'beforeend',
+    `<div><h2>${category}</h2>
+       <ul class="markup-list">${book}</ul>
+       <button>SEE MORE</button>
+     </div>`
+  );
+}
+
+// function markupTopFive(val) {
+//   return (
+//     val
+//       .map(
+//         e => `<li data-id="${e._id}" class="list-card">
+//                  <img src="${e.book_image}" alt="" class="list-img">
+//                  <h3>${e.title}</h3>
+//                  <h4 class="autor">${e.author}</h4>
+
+//                </li>`
+//       )
+//       // })
+//       .join('')
+//   );
+// }
 
 topFive();
 
