@@ -1,0 +1,11 @@
+.img-card {
+  width: 100px;
+  height: 142px;
+}
+
+@media screen and (min-width: 768px) {
+  .img-card {
+    width: 116px;
+    height: 165px;
+  }
+}

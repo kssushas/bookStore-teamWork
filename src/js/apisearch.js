@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-const list = document.querySelector('.js-list');
-
 axios.defaults.baseURL = 'https://books-backend.p.goit.global/books/';
 
 async function makeList() {
@@ -13,9 +11,10 @@ async function makeList() {
   list.insertAdjacentHTML('beforeend', markupLi);
 }
 
+
 makeList();
 
-// ------------------------------------------------------------------ //
+// // ------------------------------------------------------------------ //
 
 const listOfBookFromCategory = document.querySelector(
   '.listOfBookFromCategory'
@@ -34,7 +33,7 @@ list.addEventListener('click', e => {
   makeRequest();
 });
 
-//-----------------------------------------------------//
+// //-----------------------------------------------------//
 
 async function topFive() {
   const result1 = axios.get('top-books');
@@ -47,7 +46,7 @@ async function topFive() {
 
 topFive();
 
-//---------------------------------------------------------------//
+// //---------------------------------------------------------------//
 
 const modal = document.querySelector('.modal');
 
@@ -66,32 +65,33 @@ listOfBookFromCategory.addEventListener('click', e => {
 });
 
 // ============================================================ //
+
+
 //===========================================================//
 //===========================================================//
 //===========================================================//
-list.addEventListener('click', e => {
-  const nameOfCategory = e.target.textContent;
-  if (nameOfCategory === 'All categories') {
-    topFive();
-  }
-});
+// list.addEventListener('click', e => {
+//   const nameOfCategory = e.target.textContent;
+//   if (nameOfCategory === 'All categories') {
+//     topFive();
+//   }
+// });
 
-function markupAllCategories() {
-  return `     <li class="list-Elem" data-target="All categories">All categories</li> 
-`;
-}
-list.insertAdjacentHTML('afterbegin', markupAllCategories());
-markupAllCategories();
+// function markupAllCategories() {
+//   return `     <li class="list-Elem" data-target="All categories">All categories</li> 
+// `;
+// }
+// list.insertAdjacentHTML('afterbegin', markupAllCategories());
+// markupAllCategories();
 
-function tabClick(evt) {
-  let tabs = document.getElementsByClassName("list-Elem");
-  let listTabs = Array.from(tabs)
+// function tabClick(evt) {
+//   let tabs = document.getElementsByClassName('list-Elem');
+//   let listTabs = Array.from(tabs);
 
-  for (let i = 0; i < listTabs.length; i++) {
-    listTabs[i].classList.remove("chose");
-  }
-  evt.target.classList.add('chose');
-}
+//   for (let i = 0; i < listTabs.length; i++) {
+//     listTabs[i].classList.remove('chose');
+//   }
+//   evt.target.classList.add('chose');
+// }
 
-list.addEventListener('click', tabClick)
-
+// list.addEventListener('click', tabClick);
