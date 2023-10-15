@@ -1,5 +1,12 @@
 // import axios from 'axios';
 
+// axios.defaults.baseURL = 'https://books-backend.p.goit.global/books/';
+// export async function serviceModal(touchId) {
+//   const responce = await axios.get(`${touchId}`);
+//   return await responce.data; 
+// }
+
+
 // const list = document.querySelector('.js-list');
 
 // axios.defaults.baseURL = 'https://books-backend.p.goit.global/books/';
