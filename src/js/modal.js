@@ -1,6 +1,6 @@
 import { serviceModal } from './apisearch';
 
-const modal = document.querySelector('.modal');
+const modal = document.querySelector('.modal-field');
 const picture = document.querySelector('.js-modal-picture');
 const modalInfo = document.querySelector('.js-modal-info');
 const overlay = document.querySelector('.js-overlay-modal');
