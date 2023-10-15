@@ -1,12 +1,12 @@
-@import url('./reset.css');
-@import url('./header.css');
-@import url('./bestsellers.css');
-@import url('./allcategories.css');
-@import url('./support.css');
 @import url('./allcategories.css');
 @import url('./anchor.css');
+@import url('./bestsellers.css');
+@import url('./header.css');
 @import url('./loader.css');
 @import url('./modal.css');
+@import url('./reset.css');
+@import url('./shoplist.css');
+@import url('./support.css');
 
 :root {
   /* Fonts */
