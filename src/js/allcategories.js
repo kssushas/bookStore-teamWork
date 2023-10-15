@@ -1,4 +1,5 @@
 import axios from 'axios';
+// import { forModal } from './modal';
 
 const list = document.querySelector('.js-list');
 
@@ -141,3 +142,8 @@ function makeModal(val) {
   <button type="button" class="js-add"> add </button>
   `;
 }
+// listOfBookFromCategory.addEventListener('click', e => {
+//   const touch = e.target.closest('li');
+//   const touchId = touch.dataset.id;
+//   forModal(touchId);
+// });
