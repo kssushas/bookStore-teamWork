@@ -1,28 +1,32 @@
 /* THEME DARK */
-body.theme-dark header{
+body.theme-dark header {
   background-color: var(--main-tx-cl);
 }
-body.theme-dark .header-logo-text{
-  fill: var(--white-bg-cl); 
-}
-body.theme-dark .nav-link{
-color: var(--white-bg-cl);
-}
-body.theme-dark .nav-link{
+body.theme-dark .header-logo-text {
   fill: var(--white-bg-cl);
 }
-body.theme-dark .mob-nav-link{
+body.theme-dark .nav-link {
   color: var(--white-bg-cl);
 }
-body.theme-dark .shopping-cart{
+body.theme-dark .nav-link {
+  fill: var(--white-bg-cl);
+}
+body.theme-dark .burger {
+  stroke: var(--white-bg-cl);
+}
+body.theme-dark .icon-close {
+  stroke: var(--white-bg-cl);
+}
+
+body.theme-dark .header-mob-link {
+  color: var(--white-bg-cl);
+}
+body.theme-dark .shopping-cart {
   fill: var(--white-bg-cl);
 }
 
 /* THEME LIGHT */
 .header {
-  /* position: fixed;
-    width: 100%;
-    z-index: 100; */
   padding-top: 18px;
   padding-bottom: 18px;
   border-radius: 0px 0px 8px 8px;
@@ -58,8 +62,8 @@ body.theme-dark .shopping-cart{
   stroke: #111111;
 }
 .burger:hover,
-.burger:focus{
-    stroke: #4f2ee8;
+.burger:focus {
+  stroke: #4f2ee8;
 }
 .burger-open {
   border: none;
@@ -150,10 +154,7 @@ input:checked + .slider:before {
   top: 0;
   left: 0;
   z-index: 100;
-  /* background-image: 
-  url(../img/mob-menu-pic.png);
-  background-position: 50% 100%;
-  background-repeat: no-repeat; */
+
   background-image: radial-gradient(
     189.32% 190.93% at 59.76% -23.42%,
     #4f2ee8 18.03%,
@@ -198,6 +199,7 @@ input:checked + .slider:before {
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  gap: 4px;
 }
 .mob-nav-link.current {
   border-radius: 36px;
@@ -213,9 +215,7 @@ input:checked + .slider:before {
   display: flex;
   justify-content: center;
 }
-.img-books {
-  
-}
+
 @media screen and (min-width: 768px) {
   .mob-menu {
     display: none;
@@ -231,7 +231,6 @@ input:checked + .slider:before {
 
   .nav-link {
     color: var(--main-tx-cl);
-
     font-family: var(--primary-font);
     font-size: 14px;
     font-style: normal;
@@ -241,6 +240,7 @@ input:checked + .slider:before {
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    gap: 4px;
   }
   .nav-list-item {
     align-self: baseline;
