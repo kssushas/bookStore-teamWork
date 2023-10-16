@@ -264,9 +264,9 @@ input:checked + .slider:before {
 }
 
 @media screen and (min-width: 1280px) {
-  .container {
+  /* .container {
     max-width: 1440px;
-  }
+  } */
   .nav-list {
     gap: 24px;
   }
