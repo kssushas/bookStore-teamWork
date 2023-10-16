@@ -74,8 +74,8 @@ body.theme-dark .js-see-more {
   display: none;
 }
 
-.shopping-cart {
-}
+/* .shopping-cart {
+} */
 .burger {
   stroke: var(--main-tx-cl);
 }
