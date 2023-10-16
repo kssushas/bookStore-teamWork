@@ -45,9 +45,9 @@ list.addEventListener('click', e => {
 function markupBookOfcategory(val) {
   return val
     .map(elem => {
-      return ` <li data-id="${elem._id}">
-    <img src="${elem.book_image}" alt="" />
-    <h1>${elem.title}</h1>
+      return ` <li class="js-list-card" data-id="${elem._id}">
+    <img class="js-list-img" src="${elem.book_image}" alt="" />
+    <h1 class="js-list-title">${elem.title}</h1>
   </li>`;
     })
     .join('');
@@ -62,15 +62,12 @@ topFive().then(data =>
 function markupTopFive(category, arrBook) {
   const book = arrBook
     .map(
-
       elem => `<li class="js-list-card" data-id="${elem._id}"> 
-      
-
-                <img class="js-list-img" src="${elem.book_image}" alt="${elem._id}">
-                <div class="js-list-text">
-                  <h4 class="js-list-title">${elem.title}</h4>
-                  <p class="js-autor">${elem.author}</p>
-                </div>
+                 <img class="js-list-img" src="${elem.book_image}" alt="${elem._id}">
+                 <div class="js-list-text">
+                   <h4 class="js-list-title">${elem.title}</h4>
+                   <p class="js-autor">${elem.author}</p>
+                 </div>
                </li>`
     )
     .join('');
@@ -116,10 +113,10 @@ markupAllCategories();
 list.addEventListener('click', e => {
   const nameOfCategory = e.target.textContent;
   if (nameOfCategory === 'All categories') {
-    console.log(nameOfCategory)
+    console.log(nameOfCategory);
     topFive().then(data =>
       data.map(val => markupTopFive(val.list_name, val.books))
-    );;
+    );
   }
 });
 
@@ -131,7 +128,7 @@ function tabClick(evt) {
     listTabs[i].classList.remove('chose');
   }
   evt.target.classList.add('chose');
-  console.log(evt.target)
+  console.log(evt.target);
 }
 
 list.addEventListener('click', tabClick);
