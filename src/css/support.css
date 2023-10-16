@@ -19,7 +19,6 @@
   padding-top: 24px;
   margin-bottom: 40px;
   color: var(--white-tx-cl);
-  font-style: normal;
   font-weight: 700;
 }
 
@@ -30,7 +29,7 @@
 
 .js-support-list {
   padding-left: 40px;
-  color: #fff;
+  color: var(--white-tx-cl);
   filter: brightness(0) invert(1);
 }
 
@@ -42,7 +41,7 @@
   height: 32px;
   border: none;
   border-radius: 19px;
-  color: #fff;
+  color: var(--white-tx-cl);
   display: inline-block;
   display: flex;
   justify-content: center;

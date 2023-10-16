@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+ 
 }
 
 .buttons {
@@ -28,12 +29,14 @@
   display: none;
 }
 
-.shopping-cart {
-}
+/* .shopping-cart {
+} */
 .burger {
   stroke: var(--black-bg-cl);
+
   transition: stroke var(--anim-slow);
 }
+
 .burger:hover {
   stroke: var(--violet-tx-cl);
 }
@@ -47,6 +50,7 @@
   display: inline-block;
   width: 40px;
   height: 20px;
+  
 }
 
 .switch input {
@@ -164,7 +168,6 @@ input:checked + .slider:before {
   color: var(--main-tx-cl);
   font-family: var(--primary-font);
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
   line-height: 1.29;
   letter-spacing: -0.56px;
@@ -205,7 +208,6 @@ input:checked + .slider:before {
     color: var(--main-tx-cl);
     font-family: var(--primary-font);
     font-size: 14px;
-    font-style: normal;
     font-weight: 700;
     line-height: 1.29;
     letter-spacing: -0.56px;
@@ -250,13 +252,11 @@ input:checked + .slider:before {
     color: var(--white-bg-cl);
     font-family: var(--primary-font);
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
     line-height: 1.29;
     letter-spacing: -0.56px;
     transition: box-shadow var(--anim-афіе);
-  }
-
+  
   .sign-btn:hover,
   .sign-btn:focus {
     box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.15);
