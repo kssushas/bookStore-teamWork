@@ -5,20 +5,19 @@ axios.defaults.baseURL = 'https://books-backend.p.goit.global/books/';
 //  Не чіпати - це запит для модалки!!!
 export async function serviceModal(touchId) {
   const responce = await axios.get(`${touchId}`);
-  return await responce.data; 
+  return await responce.data;
 }
 // !!!!!!
 // В цьому файлі мають бути лише запити!!!! Такий як зверху!!! Без викликів функцій, без розмітки
 
-// async function makeList() {
-//   const result = axios.get('top-books');
-//   const resultVal = await result.then(data => data.data);
-//   const dta = await resultVal.map(val => val.list_name);
-//   console.log(dta)
-//   const markupLi = markup(dta);
-//   list.insertAdjacentHTML('beforeend', markupLi);
-// }
-
+export async function makeList() {
+  return axios.get('top-books').then(response => {
+    if (response.status !== 200) {
+      throw new Error(response.status);
+    }
+    return response.data;
+  });
+}
 
 // makeList();
 
@@ -31,26 +30,28 @@ export async function serviceModal(touchId) {
 // list.addEventListener('click', e => {
 //   const nameOfCategory = e.target.textContent;
 
-//   async function makeRequest() {
-//     const categoryList = axios.get(`category?category=${nameOfCategory}`);
-//     const resReq = await categoryList.then(data => data.data);
-//     const markupListBook = markupBookOfcategory(resReq);
-//     listOfBookFromCategory.innerHTML = markupListBook;
-//   }
+export async function booksOfCurrentCategory(nameOfCategory) {
+  return axios.get(`category?category=${nameOfCategory}`).then(response => {
+    if (response.status !== 200) {
+      throw new Error(response.status);
+    }
+    return response.data;
+  });
+}
 
 //   makeRequest();
 // });
 
 // //-----------------------------------------------------//
 
-// async function topFive() {
-//   const result1 = axios.get('top-books');
-//   const resultVal1 = await result1.then(data => data.data);
-//   const dta = await resultVal1.map(e => e.books);
-//   const booksTopFive = dta.map(e => e);
-//   const markupForTopFive = markupTopFive(booksTopFive);
-//   listOfBookFromCategory.innerHTML = await markupForTopFive;
-// }
+export async function topFive() {
+  return axios.get('top-books').then(response => {
+    if (response.status !== 200) {
+      throw new Error(response.status);
+    }
+    return response.data;
+  });
+}
 
 // topFive();
 
@@ -74,23 +75,24 @@ export async function serviceModal(touchId) {
 
 // ============================================================ //
 
+//===========================================================//
+//===========================================================//
+//===========================================================//
 
-//===========================================================//
-//===========================================================//
-//===========================================================//
+// function markupAllCategories() {
+//   return `     <li class="list-Elem" data-target="All categories">All categories</li> 
+// `;
+// }
+// // console.log(markupAllCategories())
+// list.insertAdjacentHTML('afterbegin', markupAllCategories());
+// markupAllCategories();
+
 // list.addEventListener('click', e => {
 //   const nameOfCategory = e.target.textContent;
 //   if (nameOfCategory === 'All categories') {
 //     topFive();
 //   }
 // });
-
-// function markupAllCategories() {
-//   return `     <li class="list-Elem" data-target="All categories">All categories</li> 
-// `;
-// }
-// list.insertAdjacentHTML('afterbegin', markupAllCategories());
-// markupAllCategories();
 
 // function tabClick(evt) {
 //   let tabs = document.getElementsByClassName('list-Elem');
