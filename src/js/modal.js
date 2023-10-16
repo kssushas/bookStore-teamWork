@@ -63,8 +63,20 @@ function makeModal({
   modalInfo.insertAdjacentHTML('beforeend', text);
 }
 
-closeBtn.addEventListener('click', () => {
+function closeModal() {
   modal.classList.remove('active');
   overlay.classList.remove('active');
   document.body.style.overflow = '';
-});
+}
+closeBtn.addEventListener('click', closeModal);
+
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === "Escape") {
+    closeModal(); 
+  }
+})
+
+overlay.addEventListener('click', () =>  {
+    closeModal();
+  });
