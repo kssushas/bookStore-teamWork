@@ -77,11 +77,11 @@ body.theme-dark .js-see-more {
 .shopping-cart {
 }
 .burger {
-  stroke: #111111;
+  stroke: var(--main-tx-cl);
 }
 .burger:hover,
 .burger:focus {
-  stroke: #4f2ee8;
+  stroke: var(--violet-tx-cl);
 }
 .burger-open {
   border: none;
@@ -191,11 +191,11 @@ input:checked + .slider:before {
   border: none;
 }
 .icon-close {
-  stroke: #111111;
+  stroke: var(--main-tx-cl);
 }
 .icon-close:hover,
 .icon-close:focus {
-  stroke: #4f2ee8;
+  stroke: var(--violet-tx-cl);
 }
 .mob-nav-list {
   display: flex;
@@ -210,7 +210,6 @@ input:checked + .slider:before {
   color: var(--main-tx-cl);
   font-family: var(--primary-font);
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
   line-height: 1.29;
   letter-spacing: -0.56px;
@@ -251,7 +250,6 @@ input:checked + .slider:before {
     color: var(--main-tx-cl);
     font-family: var(--primary-font);
     font-size: 14px;
-    font-style: normal;
     font-weight: 700;
     line-height: 1.29;
     letter-spacing: -0.56px;
@@ -292,11 +290,10 @@ input:checked + .slider:before {
     flex-shrink: 0;
     border-radius: 18px;
     border: 1.5px solid var(--main-tx-cl);
-    background: #4f2ee8;
+    background: var(--violet-bg-cl);
     color: var(--white-bg-cl);
     font-family: var(--primary-font);
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
     line-height: 1.29;
     letter-spacing: -0.56px;

@@ -1,9 +1,8 @@
 .chose {
-  color: #4f2ee8;
+  color: var(--violet-tx-cl);
   font-size: 18px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 133.333% */
+  line-height: 1.33;
   letter-spacing: -0.36px;
   text-transform: uppercase;
   transform: translate(24px);

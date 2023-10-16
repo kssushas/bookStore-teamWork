@@ -36,7 +36,7 @@
   font-size: 32px;
   line-height: 1.19;
   letter-spacing: -0.04em;
-  color: #111111;
+  color: var(--main-tx-cl);
 }
 @media screen and (min-width: 768px) {
   .shopping-list-header {
@@ -53,16 +53,14 @@
   }
 }
 .shopping-blue {
-  color: #4f2ee8;
+  color: var(--violet-tx-cl);
 }
 
 .shop-list-text {
   margin-bottom: 14px;
   width: 244px;
   min-height: 36px;
-  font-family: 'DM Sans';
   font-size: 14px;
-  font-weight: 400;
   line-height: calc(18 / 14);
   text-align: center;
   color: #00000099;
@@ -147,7 +145,7 @@
   padding: 14px;
   gap: 14px;
   width: 335px;
-  background: #ffff;
+  background: var(--white-bg-cl);
   border: 2px solid rgba(79, 46, 232, 0.4);
   border-radius: 16px;
 }
