@@ -6,6 +6,7 @@
   flex-direction: column;
   margin: 0 auto;
   padding-top: 40px;
+  list-style: none;
 }
 .title-all-cat {
   color: #4f2ee8;
