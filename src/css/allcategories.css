@@ -1,9 +1,11 @@
+.allcategories {
+  background-color: var(--light-bg-cl);
+}
 .wrapper {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding-top: 40px;
-  background-color: var(--light-bg-cl);
 }
 .title-all-cat {
   color: #4f2ee8;
@@ -21,7 +23,7 @@
 .listOfBookFromCategory {
   display: flex;
   flex-wrap: wrap;
-  width: 335px;
+  /* width: 335px; */
 }
 
 .list-top {
@@ -57,6 +59,7 @@
 }
 .top-list {
   padding: 40px 0px 80px 0px;
+  max-width: 90%;
 }
 .top-list-header {
   color: var(--main-tx-cl);
@@ -151,7 +154,7 @@
     padding: 100px 0px 100px 0px;
   }
   .listOfBookFromCategory {
-    width: 704px;
+    /* width: 704px; */
     gap: 25px;
   }
   .js-markup-category {
@@ -183,8 +186,9 @@
   }
   .listOfBookFromCategory {
     margin-top: 40px;
-    width: 996px;
+    /* width: 996px; */
     gap: 40px;
+    max-width: 90%;
   }
   .top-list {
     padding: 0px 24px 72px 40px;
