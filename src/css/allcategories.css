@@ -18,7 +18,13 @@
 .sidebar {
   width: 335px;
 }
-
+.list-Elem{
+  color: var(--violet-tx-cl);
+font-style: normal;
+font-weight: 700;
+letter-spacing: -0.36px;
+text-transform: uppercase;
+}
 .listOfBookFromCategory {
   display: flex;
   flex-wrap: wrap;

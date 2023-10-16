@@ -1,22 +1,4 @@
-/* THEME DARK */
-body.theme-dark header {
-  background-color: var(--main-tx-cl);
-}
-body.theme-dark .header-logo-text {
-  fill: var(--white-bg-cl);
-}
-body.theme-dark .nav-link {
-  color: var(--white-bg-cl);
-}
-body.theme-dark .nav-link {
-  fill: var(--white-bg-cl);
-}
-body.theme-dark .burger {
-  stroke: var(--white-bg-cl);
-}
-body.theme-dark .icon-close {
-  stroke: var(--white-bg-cl);
-}
+
 
 body.theme-dark .header-mob-link {
   color: var(--white-bg-cl);
@@ -44,6 +26,8 @@ body.theme-dark .js-see-more {
   color: var(--white-bg-cl);
 }
 /* THEME LIGHT */
+
+
 .header {
   padding-top: 18px;
   padding-bottom: 18px;
@@ -62,6 +46,7 @@ body.theme-dark .js-see-more {
   display: flex;
   align-items: center;
   gap: 8px;
+ 
 }
 
 .buttons {
@@ -77,11 +62,11 @@ body.theme-dark .js-see-more {
 .shopping-cart {
 }
 .burger {
-  stroke: #111111;
+  stroke: var(--black-bg-cl);
 }
 .burger:hover,
 .burger:focus {
-  stroke: #4f2ee8;
+  stroke: var(--violet-tx-cl);
 }
 .burger-open {
   border: none;
@@ -93,6 +78,7 @@ body.theme-dark .js-see-more {
   display: inline-block;
   width: 40px;
   height: 20px;
+  
 }
 
 .switch input {
@@ -175,7 +161,7 @@ input:checked + .slider:before {
 
   background-image: radial-gradient(
     189.32% 190.93% at 59.76% -23.42%,
-    #4f2ee8 18.03%,
+    var(--violet-tx-cl) 18.03%,
     var(--white-bg-cl) 100%
   );
   opacity: 0;
@@ -191,11 +177,11 @@ input:checked + .slider:before {
   border: none;
 }
 .icon-close {
-  stroke: #111111;
+  stroke: var(--black-bg-cl);
 }
 .icon-close:hover,
 .icon-close:focus {
-  stroke: #4f2ee8;
+  stroke: var(--violet-tx-cl);
 }
 .mob-nav-list {
   display: flex;
@@ -292,7 +278,7 @@ input:checked + .slider:before {
     flex-shrink: 0;
     border-radius: 18px;
     border: 1.5px solid var(--main-tx-cl);
-    background: #4f2ee8;
+    background: var(--violet-tx-cl);
     color: var(--white-bg-cl);
     font-family: var(--primary-font);
     font-size: 14px;
@@ -300,7 +286,9 @@ input:checked + .slider:before {
     font-weight: 500;
     line-height: 1.29;
     letter-spacing: -0.56px;
+    /* transition: box-shadow 1000ms; */
   }
+
   .sign-btn:hover,
   .sign-btn:focus {
     box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.15);
