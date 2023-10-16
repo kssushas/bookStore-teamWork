@@ -59,8 +59,8 @@ body.theme-dark .js-see-more {
   display: none;
 }
 
-.shopping-cart {
-}
+/* .shopping-cart {
+} */
 .burger {
   stroke: var(--black-bg-cl);
 }
@@ -196,7 +196,6 @@ input:checked + .slider:before {
   color: var(--main-tx-cl);
   font-family: var(--primary-font);
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
   line-height: 1.29;
   letter-spacing: -0.56px;
@@ -237,7 +236,6 @@ input:checked + .slider:before {
     color: var(--main-tx-cl);
     font-family: var(--primary-font);
     font-size: 14px;
-    font-style: normal;
     font-weight: 700;
     line-height: 1.29;
     letter-spacing: -0.56px;
@@ -282,7 +280,6 @@ input:checked + .slider:before {
     color: var(--white-bg-cl);
     font-family: var(--primary-font);
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
     line-height: 1.29;
     letter-spacing: -0.56px;
