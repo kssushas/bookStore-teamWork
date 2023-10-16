@@ -104,7 +104,7 @@ listOfBookFromCategory.addEventListener('click', e => {
 // ==================================================
 
 function markupAllCategories() {
-  return `     <li class="list-elem" data-target="All categories">All categories</li> 
+  return `     <li class="list-elem chose" data-target="All categories">All categories</li> 
 `;
 }
 list.insertAdjacentHTML('afterbegin', markupAllCategories());
