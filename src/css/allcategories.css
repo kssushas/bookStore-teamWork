@@ -17,13 +17,13 @@
 
 .sidebar {
   width: 335px;
-  padding-right: 20px;
 }
 
 .listOfBookFromCategory {
   display: flex;
   flex-wrap: wrap;
   /* width: 335px; */
+  max-width: 100%;
 }
 
 .list-top {
@@ -91,9 +91,9 @@
 .js-list-card {
   width: 335px;
 }
-.js-list-text {
-  margin-top: 14px;
-}
+/* .js-list-text {
+
+} */
 .js-list-title {
   color: var(--main-tx-cl);
   font-size: 16px;
@@ -101,6 +101,7 @@
   line-height: 1.13;
   letter-spacing: -0.64px;
   text-transform: uppercase;
+  margin-top: 14px;
 }
 .js-button-more {
   display: flex;
@@ -188,7 +189,6 @@
     margin-top: 40px;
     /* width: 996px; */
     gap: 40px;
-    max-width: 90%;
   }
   .top-list {
     padding: 0px 24px 72px 40px;
