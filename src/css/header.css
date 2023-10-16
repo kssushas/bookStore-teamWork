@@ -1,33 +1,4 @@
 
-
-body.theme-dark .header-mob-link {
-  color: var(--white-bg-cl);
-}
-body.theme-dark .shopping-cart {
-  fill: var(--white-bg-cl);
-}
-body.theme-dark .wrapper {
-  background-color: var(--dark-bg-cl);
-}
-body.theme-dark .list-elem {
-  color: rgba(255, 255, 255, 0.6);
-}
-body.theme-dark .top-list-header {
-  color: var(--white-bg-cl);
-}
-body.theme-dark .title-all-cat {
-  color: var(--orange-bg-cl);
-}
-body.theme-dark .js-list-title {
-  color: var(--white-bg-cl);
-}
-body.theme-dark .js-see-more {
-  background-color: var(--dark-bg-cl);
-  color: var(--white-bg-cl);
-}
-/* THEME LIGHT */
-
-
 .header {
   padding-top: 18px;
   padding-bottom: 18px;
@@ -63,9 +34,11 @@ body.theme-dark .js-see-more {
 } */
 .burger {
   stroke: var(--black-bg-cl);
+
+  transition: stroke var(--anim-slow);
 }
-.burger:hover,
-.burger:focus {
+
+.burger:hover {
   stroke: var(--violet-tx-cl);
 }
 .burger-open {
@@ -178,9 +151,9 @@ input:checked + .slider:before {
 }
 .icon-close {
   stroke: var(--black-bg-cl);
+  transition: stroke var(--anim-slow);
 }
-.icon-close:hover,
-.icon-close:focus {
+.icon-close:hover {
   stroke: var(--violet-tx-cl);
 }
 .mob-nav-list {
@@ -283,9 +256,8 @@ input:checked + .slider:before {
     font-weight: 500;
     line-height: 1.29;
     letter-spacing: -0.56px;
-    /* transition: box-shadow 1000ms; */
-  }
-
+    transition: box-shadow var(--anim-афіе);
+  
   .sign-btn:hover,
   .sign-btn:focus {
     box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.15);
