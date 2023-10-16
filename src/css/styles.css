@@ -59,3 +59,7 @@ body {
     padding-right: 24px;
   }
 }
+
+body.theme-dark  {
+  background-color: var(--main-tx-cl);
+}
