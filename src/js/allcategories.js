@@ -94,33 +94,6 @@ topFive();
 
 //---------------------------------------------------------------//
 
-// const modal = document.querySelector('.modal');
-
-// listOfBookFromCategory.addEventListener('click', e => {
-//   const touch = e.target.closest('li');
-//   const touchId = touch.dataset.id;
-
-//   async function forModal() {
-//     const result = axios.get(`${touchId}`);
-//     const resultVal = await result.then(data => data.data);
-//     const modalMake = makeModal(resultVal);
-//     modal.innerHTML = modalMake;
-//   }
-
-//   forModal();
-// });
-
-// // ============================================================ //
-// function makeModal(val) {
-//   return `<h1>MODAL</h1>
-//   <img src=${val.book_image}>
-//   <h2>${val.title}</h2>
-//   <h3>${val.author}</h3>
-//   <h4>${val.contibutor}</h4>
-//   <button type="button" class="js-add"> add </button>
-//   `;
-// }
-
 // Це виклик модалки
 listOfBookFromCategory.addEventListener('click', e => {
   const touch = e.target.closest('li');
@@ -131,7 +104,7 @@ listOfBookFromCategory.addEventListener('click', e => {
 // ==================================================
 
 function markupAllCategories() {
-  return `     <li class="list-Elem" data-target="All categories">All categories</li> 
+  return `     <li class="list-elem" data-target="All categories">All categories</li> 
 `;
 }
 list.insertAdjacentHTML('afterbegin', markupAllCategories());
@@ -140,18 +113,22 @@ markupAllCategories();
 list.addEventListener('click', e => {
   const nameOfCategory = e.target.textContent;
   if (nameOfCategory === 'All categories') {
-    topFive();
+    console.log(nameOfCategory)
+    topFive().then(data =>
+      data.map(val => markupTopFive(val.list_name, val.books))
+    );;
   }
 });
 
 function tabClick(evt) {
-  let tabs = document.getElementsByClassName('list-Elem');
+  let tabs = document.getElementsByClassName('list-elem');
   let listTabs = Array.from(tabs);
 
   for (let i = 0; i < listTabs.length; i++) {
     listTabs[i].classList.remove('chose');
   }
   evt.target.classList.add('chose');
+  console.log(evt.target)
 }
 
 list.addEventListener('click', tabClick);
