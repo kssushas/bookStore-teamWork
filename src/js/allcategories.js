@@ -134,5 +134,4 @@ function tabClick(evt) {
   console.log(evt.target)
 }
 
-
 list.addEventListener('click', tabClick);
