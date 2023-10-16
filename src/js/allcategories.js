@@ -2,17 +2,18 @@ import axios from 'axios';
 //Це Функція виклику модалки!!!
 import { forModal } from './modal';
 
+import { makeList, booksOfCurrentCategory, topFive } from './apisearch';
 const list = document.querySelector('.js-list');
 
 axios.defaults.baseURL = 'https://books-backend.p.goit.global/books/';
 
-async function makeList() {
-  const result = axios.get('top-books');
-  const resultVal = await result.then(data => data.data);
-  const dta = await resultVal.map(val => val.list_name);
-  const markupLi = markup(dta);
+makeList().then(data => {
+  const categoryNameForList = data.map(val => {
+    return val.list_name;
+  });
+  const markupLi = markup(categoryNameForList);
   list.insertAdjacentHTML('beforeend', markupLi);
-}
+});
 
 function markup(val) {
   return val
@@ -24,7 +25,7 @@ function markup(val) {
 
 makeList();
 
-// ------------------------------------------------------------------ //
+// // ------------------------------------------------------------------ //
 
 const listOfBookFromCategory = document.querySelector(
   '.listOfBookFromCategory'
@@ -33,14 +34,12 @@ const listOfBookFromCategory = document.querySelector(
 list.addEventListener('click', e => {
   const nameOfCategory = e.target.textContent;
 
-  async function makeRequest() {
-    const categoryList = axios.get(`category?category=${nameOfCategory}`);
-    const resReq = await categoryList.then(data => data.data);
-    const markupListBook = markupBookOfcategory(resReq);
+  booksOfCurrentCategory(nameOfCategory).then(data => {
+    const markupListBook = markupBookOfcategory(data);
     listOfBookFromCategory.innerHTML = markupListBook;
-  }
+  });
 
-  makeRequest();
+  booksOfCurrentCategory();
 });
 
 function markupBookOfcategory(val) {
@@ -120,22 +119,22 @@ function markupBookOfcategory(val) {
 //   );
 // }
 
-async function topFive() {
-  const result = axios.get('top-books');
-  const resultVal = await result.then(data =>
-    data.data.map(val => markupTopFive(val.list_name, val.books))
-  );
-}
+topFive().then(data =>
+  data.map(val => markupTopFive(val.list_name, val.books))
+);
 
 function markupTopFive(category, arrBook) {
   const book = arrBook
     .map(
+
       elem => `<li class="js-list-card" data-id="${elem._id}"> 
+      
+
                 <img class="js-list-img" src="${elem.book_image}" alt="${elem._id}">
                 <div class="js-list-text">
                   <h4 class="js-list-title">${elem.title}</h4>
                   <p class="js-autor">${elem.author}</p>
-                </div>   
+                </div>
                </li>`
     )
     .join('');
@@ -189,10 +188,37 @@ topFive();
 //   `;
 // }
 
-
 // Це виклик модалки
 listOfBookFromCategory.addEventListener('click', e => {
   const touch = e.target.closest('li');
   const touchId = touch.dataset.id;
   forModal(touchId);
 });
+
+// ==================================================
+
+function markupAllCategories() {
+  return `     <li class="list-Elem" data-target="All categories">All categories</li> 
+`;
+}
+list.insertAdjacentHTML('afterbegin', markupAllCategories());
+markupAllCategories();
+
+list.addEventListener('click', e => {
+  const nameOfCategory = e.target.textContent;
+  if (nameOfCategory === 'All categories') {
+    topFive();
+  }
+});
+
+function tabClick(evt) {
+  let tabs = document.getElementsByClassName('list-Elem');
+  let listTabs = Array.from(tabs);
+
+  for (let i = 0; i < listTabs.length; i++) {
+    listTabs[i].classList.remove('chose');
+  }
+  evt.target.classList.add('chose');
+}
+
+list.addEventListener('click', tabClick);

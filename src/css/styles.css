@@ -7,6 +7,7 @@
 @import url('./reset.css');
 @import url('./shoplist.css');
 @import url('./support.css');
+@import url('./theme-dark.css');
 
 :root {
   /* Fonts */
@@ -58,4 +59,8 @@ body {
     padding-left: 24px;
     padding-right: 24px;
   }
+}
+
+body.theme-dark  {
+  background-color: var(--main-tx-cl);
 }

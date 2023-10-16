@@ -4,19 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="shortcut icon" href="./img/favicon-min.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Bookshelf</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300;1,9..40,400&display=swap"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -27,10 +20,18 @@
 
     <load src="./partials/header.html" />
     <load src="./partials/allcategories.html" />
-    <load src="./partials/support.html" />
     <load src="./partials/modal.html" />
     <load src="./partials/bestsellers.html" />
 
-    <script type="module" src="./main.js"></script>
+    
+    <button id="anchorBtn" class="anchor-btn">
+      <svg class="anchor-icon" width="24" height="24">
+        <use href="./img/sprite.svg#icon-anchor"></use>
+      </svg>
+    </button>
+    <load src="./partials/support.html" />
+
+
+    <script type="module" src="./main.js"></script> 
   </body>
 </html>

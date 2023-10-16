@@ -1,7 +1,8 @@
 .support-container {
+  margin-top: 40px;
   position: relative;
   max-width: 335px;
-  max-height: 460px;
+  min-height: 460px;
   background: radial-gradient(
     189.32% 190.93% at 59.76% -23.42%,
     #4f2ee8 18.03%,
@@ -17,12 +18,14 @@
   padding-left: 40px;
   padding-top: 24px;
   margin-bottom: 40px;
-  color: #fff;
+  color: var(--white-tx-cl);
+  font-style: normal;
+  font-weight: 700;
 }
 
 .support-title {
-  font-size: 22px;
   padding-right: 12px;
+  font-size: 24px;
 }
 
 .js-support-list {
@@ -41,6 +44,9 @@
   border-radius: 19px;
   color: #fff;
   display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-swap-next.swiper-button-disabled {
@@ -61,14 +67,19 @@
 }
 
 .support-slider__item img {
-  width: auto;
   height: 32px;
   margin-left: 16px;
 }
 
 @media screen and (min-width: 768px) {
   .support-container {
+    min-width: 335px;
     min-height: 474px;
+    margin-top: 0px;
+  }
+
+  .wrapper-top {
+    display: flex;
   }
 
   .support-title {
@@ -84,5 +95,10 @@
 @media screen and (min-width: 1280px) {
   .support-container {
     min-width: 356px;
+    margin-top: 40px;
+  }
+
+  .wrapper-top {
+    display: block;
   }
 }

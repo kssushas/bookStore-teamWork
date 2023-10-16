@@ -38,33 +38,74 @@ function makeModal({
         <h3 class="modal-author">${author}</h3>
         <p class="modal-description">${description}</p>
         <div class="modal-icons">
-            <a
-              href="${amazon_product_url}"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Amazon"
-            >
-              <img class="modal-amazon" src="./img/modal/_amazon.png" alt="Amazon" width="62" height="19" />
-      
-            </a>
-          
-            <a
-              href="${buy_links[1].url}"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Book"
+            <picture>
+              <source
+                srcset="
+                  ./images/modal/_amazon.png 1x,
+                  ./images/modal/_amazon-retina.png 2x
+                "
+                type="image/png"
+              />
+              <a
+                href="${amazon_product_url}"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Amazon"
               >
-              <img class="modal-apple" src="./img/modal/_book.png" alt="Book" width="33" height="32" />
-
-            </a>
+                <img
+                  class="modal-amazon"
+                  src="./images/modal/_amazon.png"
+                  alt="Amazon"
+                  width="62"
+                  height="19"
+                  loading="lazy"
+                />
+              </a>
+            </picture>
+            <picture>
+              <source
+                srcset="
+                  ./images/modal/_book.png 1x,
+                  ./images/modal/_book-retina.png 2x
+                "
+                type="image/png"
+              />
+              <a
+                href="${buy_links[1].url}"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Amazon"
+              >
+                <img
+                  class="modal-amazon"
+                  src="./images/modal/_book.png"
+                  alt="Amazon"
+                  width="62"
+                  height="19"
+                  loading="lazy"
+                />
+              </a>
+            </picture>
             </div>`;
 
   picture.insertAdjacentHTML('beforeend', content);
   modalInfo.insertAdjacentHTML('beforeend', text);
 }
 
-closeBtn.addEventListener('click', () => {
+function closeModal() {
   modal.classList.remove('active');
   overlay.classList.remove('active');
   document.body.style.overflow = '';
-});
+}
+closeBtn.addEventListener('click', closeModal);
+
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === "Escape") {
+    closeModal(); 
+  }
+})
+
+overlay.addEventListener('click', () =>  {
+    closeModal();
+  });
