@@ -1,22 +1,22 @@
 import { serviceModal } from './apisearch';
-
-
+import { checkLocaleStorage } from './localeStorage';
+export {result}
 const modal = document.querySelector('.modal-field');
 const picture = document.querySelector('.js-modal-picture');
 const modalInfo = document.querySelector('.js-modal-info');
 const overlay = document.querySelector('.js-overlay-modal');
-const addBtn = document.querySelector('js-modal-btn');
-
 const closeBtn = document.querySelector('.js-modal-close');
 const LS_KEY = 'book-inf';
+
+let result = null;
 
 export async function forModal(touchId) {
   overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
   picture.innerHTML = '';
   modalInfo.innerHTML = '';
-  const result = await serviceModal(touchId);
-  console.log(result);
+  result = await serviceModal(touchId);
+  checkLocaleStorage(result)
 
   const modalMake = makeModal(result);
   modal.classList.add('active');

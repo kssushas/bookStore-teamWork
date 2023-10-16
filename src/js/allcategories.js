@@ -46,7 +46,7 @@ list.addEventListener('click', e => {
 function markupBookOfcategory(val) {
   return val
     .map(elem => {
-      return `      <li>
+      return ` <li data-id="${elem._id}">
     <img src="${elem.book_image}" alt="" />
     <h1>${elem.title}</h1>
   </li>`;
@@ -130,7 +130,7 @@ async function topFive() {
 function markupTopFive(category, arrBook) {
   const book = arrBook
     .map(
-      elem => `<li class="js-list-card"> 
+      elem => `<li class="js-list-card" data-id="${elem._id}"> 
                 <img class="js-list-img" src="${elem.book_image}" alt="${elem._id}">
                 <div class="js-list-text">
                   <h4 class="js-list-title">${elem.title}</h4>
