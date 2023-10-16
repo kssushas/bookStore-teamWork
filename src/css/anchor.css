@@ -22,12 +22,12 @@
   }
   
   
-  anchor-btn.show {
+  .anchor-btn.show {
     opacity: 1;
     visibility: visible;
     pointer-events: initial;
   }
   
-  anchor-btn:hover{
+  .anchor-btn:hover{
     border: 5px solid rgba(213, 184, 255, 0.7);            
   }
