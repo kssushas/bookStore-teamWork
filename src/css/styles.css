@@ -1,35 +1,40 @@
-
-@import url('./reset.css');
-
+@import url('./allcategories.css');
+@import url('./anchor.css');
+@import url('./bestsellers.css');
 @import url('./header.css');
-@import url('./allcategories.css');
+@import url('./loader.css');
+@import url('./modal.css');
+@import url('./reset.css');
+@import url('./shoplist.css');
 @import url('./support.css');
-@import url('./allcategories.css');
-
 
 :root {
   /* Fonts */
   --primary-font: DM Sans, sans-serif;
   /* Text colors */
   --main-tx-cl: #111111;
-  --light-tx-cl: #B4AFAF;
-  --violet-tx-cl: #4F2EE8;
+  --light-tx-cl: #b4afaf;
+  --violet-tx-cl: #4f2ee8;
   --white-tx-cl: #ffffff;
 
   /* Bg colors */
-  --white-bg-cl: #FFFFFF;
-  --light-bg-cl: #F6F6F6;
-  --violet-bg-cl: #4F2EE8;
-  --orange-bg-cl: #EAC645;
+  --white-bg-cl: #ffffff;
+  --light-bg-cl: #f6f6f6;
+  --violet-bg-cl: #4f2ee8;
+  --orange-bg-cl: #eac645;
   --black-bg-cl: #111111;
   --dark-bg-cl: #202024;
+
+  /* Annimations */
+  --anim-superfast: 150ms ease-in;
+  --anim-fast: 300ms ease-in;
+  --anim-slow: 800ms ease;
 }
 
 body {
   font-family: var(--primary-font);
   font-size: 18px;
   line-height: 1.33;
-  
 }
 .container {
   width: 100%;
@@ -46,9 +51,10 @@ body {
     padding-right: 32px;
   }
 }
+
 @media screen and (min-width: 1280px) {
   .container {
-    max-width: 1280px;
+    max-width: 1440px;
     padding-left: 24px;
     padding-right: 24px;
   }
