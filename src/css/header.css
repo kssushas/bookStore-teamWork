@@ -1,3 +1,4 @@
+
 .header {
   padding-top: 18px;
   padding-bottom: 18px;
@@ -16,6 +17,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+ 
 }
 
 .buttons {
@@ -32,8 +34,10 @@
 }
 .burger {
   stroke: var(--black-bg-cl);
+
   transition: stroke var(--anim-slow);
 }
+
 .burger:hover {
   stroke: var(--violet-tx-cl);
 }
@@ -47,6 +51,7 @@
   display: inline-block;
   width: 40px;
   height: 20px;
+  
 }
 
 .switch input {
@@ -255,8 +260,7 @@ input:checked + .slider:before {
     line-height: 1.29;
     letter-spacing: -0.56px;
     transition: box-shadow var(--anim-афіе);
-  }
-
+  
   .sign-btn:hover,
   .sign-btn:focus {
     box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.15);
@@ -264,9 +268,9 @@ input:checked + .slider:before {
 }
 
 @media screen and (min-width: 1280px) {
-  .container {
+  /* .container {
     max-width: 1440px;
-  }
+  } */
   .nav-list {
     gap: 24px;
   }
