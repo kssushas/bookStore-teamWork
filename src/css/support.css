@@ -44,6 +44,9 @@
   border-radius: 19px;
   color: #fff;
   display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-swap-next.swiper-button-disabled {
