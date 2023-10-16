@@ -12,7 +12,7 @@
     transition: 0.3s all;
 }
 
-.modal {
+.modal-field {
     opacity: 0;
     visibility: hidden;
     box-sizing: border-box;
@@ -33,7 +33,7 @@
     overflow: auto;
 }
 
-.modal.active,
+.modal-field.active,
 .overlay.active {
     opacity: 1;
     visibility: visible;
@@ -45,7 +45,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .modal {
+    .modal-field {
         width: 579px;
         padding: 40px 40px;
     }

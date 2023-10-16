@@ -1,5 +1,6 @@
 import axios from 'axios';
-// import { forModal } from './modal';
+//Це Функція виклику модалки!!!
+import { forModal } from './modal';
 
 const list = document.querySelector('.js-list');
 
@@ -16,7 +17,7 @@ async function makeList() {
 function markup(val) {
   return val
     .map(element => {
-      return `<li class="list-Elem"  data-target="${element}">${element}</li>`;
+      return `<li class="list-elem"  data-target="${element}">${element}</li>`;
     })
     .join('');
 }
@@ -55,20 +56,29 @@ function markupBookOfcategory(val) {
 
 //-----------------------------------------------------//
 
-async function topFive() {
-  const result1 = axios.get('top-books');
-  const resultVal1 = await result1.then(data => data.data);
-  const dta = await resultVal1.map(e => e.books);
-  console.log(dta);
-  // const booksTopFive = dta.map(e => e);
-  // console.log(booksTopFive);
-  for (let i = 0; i < dta.length; i++) {
-    let markupForTopFive = markupTopFive(dta[i]);
-    // console.log(markupForTopFive);
-    listOfBookFromCategory.insertAdjacentHTML('beforeend', markupForTopFive);
-  }
-}
+// async function topFive1() {
+//   const result1 = axios.get('top-books');
 
+//   const resultVal12 = await result1.then(data => data.data);
+//   console.log(resultVal12);
+// const dta = awaFit resultVal12.map(e => e.books);
+// console.log(dta);
+// const booksTopFive = dta.last_name;
+// console.log(booksTopFive);
+// for (let i = 0; i < dta.length; i++) {
+//   let category;
+//   for (const data of dta[i]) {
+//     category = data.list_name;
+//   }
+// console.log(category);
+// console.log(dta[i]);
+
+// let markupForTopFive = markupTopFive(dta[i]);
+// console.log(markupForTopFive);
+//     listOfBookFromCategory.insertAdjacentHTML('beforeend', markupForTopFive);
+// }
+// }
+// topFive1();
 // const catName = document.querySelector('.cat');
 // console.log(catName.textContent);
 
@@ -94,56 +104,95 @@ async function topFive() {
 //   myFunc();
 // }
 
-function markupTopFive(val) {
-  // console.log(val);
-  // return val.map(element => {
-  // console.log(element);
-  return (
-    val
-      .map(
-        e => `<li data-id="${e._id}" class="list-card"> 
-                 <img src="${e.book_image}" alt="" class="list-img">
-                 <h3>${e.title}</h3>
-                 <h4 class="autor">${e.author}</h4>
-               </li>`
-      )
-      // })
-      .join('')
+// function markupTopFive(val) {
+//   return (
+//     val
+//       .map(
+//         e => `<li data-id="${e._id}" class="list-card">
+//                  <img src="${e.book_image}" alt="" class="list-img">
+//                  <h3>${e.title}</h3>
+//                  <h4 class="autor">${e.author}</h4>
+
+//                </li>`
+//       )
+//       // })
+//       .join('')
+//   );
+// }
+
+async function topFive() {
+  const result = axios.get('top-books');
+  const resultVal = await result.then(data =>
+    data.data.map(val => markupTopFive(val.list_name, val.books))
   );
 }
+
+function markupTopFive(category, arrBook) {
+  const book = arrBook
+    .map(
+      elem => `<li class="js-list-card"> 
+                <img class="js-list-img" src="${elem.book_image}" alt="${elem._id}">
+                <div class="js-list-text">
+                  <h4 class="js-list-title">${elem.title}</h4>
+                  <p class="js-autor">${elem.author}</p>
+                </div>   
+               </li>`
+    )
+    .join('');
+
+  listOfBookFromCategory.insertAdjacentHTML(
+    'beforeend',
+    `<div>
+       <h3 class="js-markup-category">${category}</h3>
+       <ul class="js-markup-list">${book}</ul>
+       <div class="js-button-more"><button class="js-see-more">See more</button></div>
+     </div>`
+  );
+}
+
+const listHeader = document.querySelector('.list-header');
+listHeader.insertAdjacentHTML(
+  'beforeend',
+  `<h2 class="top-list-header">
+  Best Sellers <span class="top-list-header-span">Books</span>
+</h2>`
+);
 
 topFive();
 
 //---------------------------------------------------------------//
 
-const modal = document.querySelector('.modal');
+// const modal = document.querySelector('.modal');
 
-listOfBookFromCategory.addEventListener('click', e => {
-  const touch = e.target.closest('li');
-  const touchId = touch.dataset.id;
-
-  async function forModal() {
-    const result = axios.get(`${touchId}`);
-    const resultVal = await result.then(data => data.data);
-    const modalMake = makeModal(resultVal);
-    modal.innerHTML = modalMake;
-  }
-
-  forModal();
-});
-
-// ============================================================ //
-function makeModal(val) {
-  return `<h1>MODAL</h1>
-  <img src=${val.book_image}>
-  <h2>${val.title}</h2>
-  <h3>${val.author}</h3>
-  <h4>${val.contibutor}</h4>
-  <button type="button" class="js-add"> add </button>
-  `;
-}
 // listOfBookFromCategory.addEventListener('click', e => {
 //   const touch = e.target.closest('li');
 //   const touchId = touch.dataset.id;
-//   forModal(touchId);
+
+//   async function forModal() {
+//     const result = axios.get(`${touchId}`);
+//     const resultVal = await result.then(data => data.data);
+//     const modalMake = makeModal(resultVal);
+//     modal.innerHTML = modalMake;
+//   }
+
+//   forModal();
 // });
+
+// // ============================================================ //
+// function makeModal(val) {
+//   return `<h1>MODAL</h1>
+//   <img src=${val.book_image}>
+//   <h2>${val.title}</h2>
+//   <h3>${val.author}</h3>
+//   <h4>${val.contibutor}</h4>
+//   <button type="button" class="js-add"> add </button>
+//   `;
+// }
+
+
+// Це виклик модалки
+listOfBookFromCategory.addEventListener('click', e => {
+  const touch = e.target.closest('li');
+  const touchId = touch.dataset.id;
+  forModal(touchId);
+});

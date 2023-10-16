@@ -1,35 +1,28 @@
-// import axios from 'axios';
+import axios from 'axios';
 
-// axios.defaults.baseURL = 'https://books-backend.p.goit.global/books/';
-// export async function serviceModal(touchId) {
-//   const responce = await axios.get(`${touchId}`);
-//   return await responce.data; 
-// }
+axios.defaults.baseURL = 'https://books-backend.p.goit.global/books/';
 
-
-// const list = document.querySelector('.js-list');
-
-// axios.defaults.baseURL = 'https://books-backend.p.goit.global/books/';
+//  Не чіпати - це запит для модалки!!!
+export async function serviceModal(touchId) {
+  const responce = await axios.get(`${touchId}`);
+  return await responce.data; 
+}
+// !!!!!!
+// В цьому файлі мають бути лише запити!!!! Такий як зверху!!! Без викликів функцій, без розмітки
 
 // async function makeList() {
 //   const result = axios.get('top-books');
 //   const resultVal = await result.then(data => data.data);
 //   const dta = await resultVal.map(val => val.list_name);
+//   console.log(dta)
 //   const markupLi = markup(dta);
 //   list.insertAdjacentHTML('beforeend', markupLi);
 // }
 
-// function markup(val) {
-//   return val
-//     .map(element => {
-//       return `<li class="list-Elem"  data-target="${element}">${element}</li>`;
-//     })
-//     .join('');
-// }
 
 // makeList();
 
-// // ------------------------------------------------------------------ //
+// // // ------------------------------------------------------------------ //
 
 // const listOfBookFromCategory = document.querySelector(
 //   '.listOfBookFromCategory'
@@ -48,17 +41,6 @@
 //   makeRequest();
 // });
 
-// function markupBookOfcategory(val) {
-//   return val
-//     .map(elem => {
-//       return `      <li>
-//     <img src="${elem.book_image}" alt="" />
-//     <h1>${elem.title}</h1>
-//   </li>`;
-//     })
-//     .join('');
-// }
-
 // //-----------------------------------------------------//
 
 // async function topFive() {
@@ -68,22 +50,6 @@
 //   const booksTopFive = dta.map(e => e);
 //   const markupForTopFive = markupTopFive(booksTopFive);
 //   listOfBookFromCategory.innerHTML = await markupForTopFive;
-// }
-
-// function markupTopFive(val) {
-//   return val
-//     .map(element => {
-//       return element.map(
-//         e => `<ul>
-//                <li data-id="${e._id}">
-//                  <img src="${e.book_image}" alt="">
-//                  <h1>${e.title}</h1>
-//                  <h2>${e.author}</h2>
-//                </li>
-//               </ul>`
-//       );
-//     })
-//     .join('');
 // }
 
 // topFive();
@@ -106,42 +72,34 @@
 //   forModal();
 // });
 
-// // ============================================================ //
-// function makeModal(val) {
-//   return `<h1>MODAL</h1>
-//   <img src=${val.book_image}>
-//   <h2>${val.title}</h2>
-//   <h3>${val.author}</h3>
-//   <h4>${val.contibutor}</h4>
-//   <button type="button" class="js-add"> add </button>
-//   `;
+// ============================================================ //
+
+
+//===========================================================//
+//===========================================================//
+//===========================================================//
+// list.addEventListener('click', e => {
+//   const nameOfCategory = e.target.textContent;
+//   if (nameOfCategory === 'All categories') {
+//     topFive();
+//   }
+// });
+
+// function markupAllCategories() {
+//   return `     <li class="list-Elem" data-target="All categories">All categories</li> 
+// `;
+// }
+// list.insertAdjacentHTML('afterbegin', markupAllCategories());
+// markupAllCategories();
+
+// function tabClick(evt) {
+//   let tabs = document.getElementsByClassName('list-Elem');
+//   let listTabs = Array.from(tabs);
+
+//   for (let i = 0; i < listTabs.length; i++) {
+//     listTabs[i].classList.remove('chose');
+//   }
+//   evt.target.classList.add('chose');
 // }
 
-//===========================================================//
-//===========================================================//
-//===========================================================//
-list.addEventListener('click', e => {
-  const nameOfCategory = e.target.textContent;
-  if (nameOfCategory === 'All categories') {
-    topFive();
-  }
-});
-
-function markupAllCategories() {
-  return `     <li class="list-Elem" data-target="All categories">All categories</li> 
-`;
-}
-list.insertAdjacentHTML('afterbegin', markupAllCategories());
-markupAllCategories();
-
-function tabClick(evt) {
-  let tabs = document.getElementsByClassName('list-Elem');
-  let listTabs = Array.from(tabs);
-
-  for (let i = 0; i < listTabs.length; i++) {
-    listTabs[i].classList.remove('chose');
-  }
-  evt.target.classList.add('chose');
-}
-
-list.addEventListener('click', tabClick);
+// list.addEventListener('click', tabClick);
