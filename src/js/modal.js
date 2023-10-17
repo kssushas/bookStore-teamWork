@@ -1,6 +1,10 @@
 import { serviceModal } from './apisearch';
 import { checkLocaleStorage } from './localeStorage';
 
+
+
+export {result};
+
 const modal = document.querySelector('.modal-field');
 const picture = document.querySelector('.js-modal-picture');
 const modalInfo = document.querySelector('.js-modal-info');

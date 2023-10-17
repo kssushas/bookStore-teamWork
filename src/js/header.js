@@ -1,6 +1,7 @@
 const bodyThemeSwitch = document.getElementById('slider');
 const mobileMenuThemeSwitch = document.getElementById('mobile-slider');
 const mobileMenu = document.querySelector('.mob-menu');
+const modal = document.querySelector('.modal-field')
 
 const selectedTheme = localStorage.getItem('selectedTheme');
 
@@ -55,11 +56,18 @@ function setTheme(isDark) {
 function applyLightTheme() {
   document.body.classList.remove('theme-dark');
   mobileMenu.classList.remove('theme-dark');
+  modal.classList.remove('theme-dark')
   localStorage.setItem('selectedTheme', 'light');
+  
 }
 
+//*MODAL
 function applyDarkTheme() {
   document.body.classList.add('theme-dark');
   mobileMenu.classList.add('theme-dark');
   localStorage.setItem('selectedTheme', 'dark');
+  if (document.body.classList.contains('theme-dark')) {
+    modal.classList.add('theme-dark');
+  }
+  
 }
