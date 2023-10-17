@@ -18,12 +18,12 @@
 .sidebar {
   width: 335px;
 }
-.list-Elem{
+.list-Elem {
   color: var(--violet-tx-cl);
-font-style: normal;
-font-weight: 700;
-letter-spacing: -0.36px;
-text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
 }
 .listOfBookFromCategory {
   display: flex;
@@ -56,6 +56,9 @@ text-transform: uppercase;
 
 .js-list {
   width: 307px;
+  /* Олександр */
+  margin-left: 24px;
+  /* Олександр */
 }
 .list-elem {
   color: rgba(17, 17, 17, 0.6);
@@ -93,6 +96,9 @@ text-transform: uppercase;
   display: flex;
   flex-direction: column;
   margin-top: 18px;
+  /* Олександр */
+  flex-wrap: wrap;
+  /* Олександр */
 }
 .js-list-card {
   width: 335px;
