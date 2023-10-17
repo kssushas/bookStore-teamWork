@@ -1,8 +1,9 @@
-import { result } from './modal';
+import { result} from './modal';
 export { checkLocaleStorage };
 
 const addBtn = document.querySelector('.js-modal-btn');
 const removeBtn = document.querySelector('.js-modal-remove-btn');
+const addBook = document.querySelector('.js-modal-add');
 
 let arrayOfChosenBooks = [];
 localStorage.setItem('books', JSON.stringify(arrayOfChosenBooks));
@@ -12,6 +13,7 @@ function addToShopingList(result) {
   localStorage.setItem('books', JSON.stringify(arrayOfChosenBooks));
   addBtn.style.display = 'none';
   removeBtn.style.display = 'block';
+  addBook.style.display = 'block';
 }
 
 function removeFromTheShopList(result) {
@@ -20,6 +22,7 @@ function removeFromTheShopList(result) {
   localStorage.setItem('books', JSON.stringify(arrayOfChosenBooks));
   addBtn.style.display = 'block';
   removeBtn.style.display = 'none';
+  addBook.style.display = 'none';
 }
 
 addBtn.addEventListener('click', () => {
@@ -39,10 +42,12 @@ function checkLocaleStorage(currentBook) {
   if (takeBook.length === 0 || !find) {
     addBtn.style.display = 'block';
     removeBtn.style.display = 'none';
+    addBook.style.display = 'none';
     return;
   }
   addBtn.style.display = 'none';
   removeBtn.style.display = 'block';
+  addBook.style.display = 'block';
 
 }
 

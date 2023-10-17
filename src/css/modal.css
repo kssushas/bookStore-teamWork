@@ -1,5 +1,5 @@
 .overlay {
-  /* Скрываем подложку  */
+
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -16,13 +16,16 @@
   opacity: 0;
   visibility: hidden;
   box-sizing: border-box;
+
+  
+
   border: 2px solid var(--main-tx-cl);
   border-radius: 18px;
   background-color: var(--white-tx-cl);
   width: 335px;
   margin-bottom: 0;
 
-  /* min-height: 762px; */
+  
   padding: 40px 24px;
   position: fixed;
   max-height: 95%;
@@ -52,8 +55,12 @@
 }
 
 .modal-close {
-  width: 28px;
-  height: 28px;
+
+  width: 24px;
+  height: 24px;
+
+  
+
   position: absolute;
   top: 12px;
   right: 12px;
@@ -64,40 +71,48 @@
 
 @media only screen and (min-width: 768px) {
   .modal-close {
+
+    width: 28px;
+    height: 28px;
+
     top: 24px;
     right: 24px;
   }
 }
 
 .modal-icon {
-  width: 14px;
-  height: 14px;
+
+  width: 12px;
+  height: 12px;
+
+  
+
   stroke: var(--black-bg-cl);
   display: inline-block;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
 }
 
+@media only screen and (min-width: 768px) {
+  .modal-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+}
 .modal-icon:active,
 .modal-icon:hover,
 .modal-icon:focus {
   stroke: var(--violet-bg-cl);
+
+
 }
 
-/* @media only screen and (min-width: 768px) {
-  .modal-icon {
-  }
-} */
-/* .modal-field {
-  padding: 40px 24px;
-}
 
-@media only screen and (min-width: 768px) {
-  .modal-field {
-  }
-} */
+
 .modal-content {
   display: flex;
   flex-direction: column;
@@ -107,7 +122,7 @@
 @media only screen and (min-width: 768px) {
   .modal-content {
     flex-direction: row;
-    /* align-items: center; */
+
     gap: 24px;
     margin-bottom: 40px;
   }
@@ -117,16 +132,13 @@
   border: none;
   padding: 0;
   border-radius: 8px;
-  /* width: 285px;
-  height: 408px; */
   margin-bottom: 14px;
 }
 
 @media only screen and (min-width: 768px) {
   .modal-picture {
     margin-bottom: 0;
-    /* width: 192px;
-    height: 281px; */
+
   }
 }
 
@@ -147,11 +159,18 @@
   font-size: 16px;
   margin-bottom: 8px;
   font-weight: 600;
+
+  line-height: 1.125;
+  letter-spacing: -0.06em;
+
 }
 
 @media only screen and (min-width: 768px) {
   .modal-title {
     font-size: 24px;
+
+    line-height: 1.16;
+    letter-spacing: -0.04em;
   }
 }
 
@@ -162,12 +181,20 @@
   font-weight: 100;
   margin-bottom: 14px;
   margin-top: 0;
+
+  letter-spacing: -0.08em;
+  line-height: 1.16;
+
 }
 
 @media only screen and (min-width: 768px) {
   .modal-author {
     font-size: 14px;
     margin-bottom: 20px;
+
+    letter-spacing: -0.06857em;
+    line-height: 1.28;
+
   }
 }
 
@@ -175,12 +202,17 @@
   font-size: 14px;
   width: 287px;
   margin-bottom: 14px;
+
+  line-height: 1.28;
+  letter-spacing: -0.06857;
+
 }
 
 @media only screen and (min-width: 768px) {
   .modal-description {
     width: 279px;
     margin-bottom: 20px;
+
   }
 }
 
@@ -197,44 +229,37 @@
 .modal-amazon:hover {
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
 }
-
-.modal-amazon .dark {
-  filter: brightness(0) invert(1);
-}
-
-.modal-amazon .dark:hover {
-  filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
-}
-
 .modal-apple {
   filter: grayscale(100%);
 }
 
 .modal-apple:hover {
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
-}
 
-.modal-apple .dark {
-  filter: grayscale(100%);
-}
-
-.modal-apple .dark:hover {
-  filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
 }
 
 .modal-btn {
   height: 46px;
-  display: block;
   margin: auto;
   border: 2px solid var(--violet-bg-cl);
   border-radius: 40px;
   font-size: 14px;
+
+  letter-spacing: -0.07em;
+  line-height: 1.2;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 14px 28px;
   margin-bottom: 0;
   background-color: var(--white-bg-cl);
   transition: color var(--anim-fast), background-color var(--anim-fast);
-}
 
+}
+.modal-btn.remove {
+  padding: 14px 23px;
+}
 @media only screen and (min-width: 768px) {
   .modal-btn {
     height: 64px;
@@ -242,6 +267,7 @@
     font-size: 18px;
     padding-top: 18px;
     padding-bottom: 18px;
+    letter-spacing: -0.055em;
   }
 }
 
@@ -251,3 +277,25 @@
   background-color: var(--violet-bg-cl);
   color: var(--white-tx-cl);
 }
+
+.modal-add {
+  font-size: 10px;
+  color: rgba(17, 17, 17, 0.5);
+  font-weight: 400;
+  margin-top: 8px;
+  width: 242px;
+  margin: auto;
+  padding-top: 8px;
+  line-height: 1.2;
+  /* letter-spacing: -0.096em; */
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .modal-add {
+    font-size: 12px;
+    width: 324px;
+    letter-spacing: -0.08em;
+    line-height: 1.16;
+  }
+}
+

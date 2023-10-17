@@ -1,13 +1,15 @@
 import { serviceModal } from './apisearch';
 import { checkLocaleStorage } from './localeStorage';
 
-export {result}
+
+
+
+
 const modal = document.querySelector('.modal-field');
 const picture = document.querySelector('.js-modal-picture');
 const modalInfo = document.querySelector('.js-modal-info');
 const overlay = document.querySelector('.js-overlay-modal');
 const closeBtn = document.querySelector('.js-modal-close');
-const LS_KEY = 'book-inf';
 
 let result = null;
 
@@ -17,7 +19,7 @@ export async function forModal(touchId) {
   picture.innerHTML = '';
   modalInfo.innerHTML = '';
   result = await serviceModal(touchId);
-  checkLocaleStorage(result)
+  checkLocaleStorage(result);
 
   const modalMake = makeModal(result);
   modal.classList.add('active');
@@ -42,8 +44,8 @@ function makeModal({
             <picture>
               <source
                 srcset="
-                  ./images/modal/_amazon.png 1x,
-                  ./images/modal/_amazon-retina.png 2x
+                  ../images/modal/_amazon.png 1x,
+                  ../images/modal/_amazon-retina.png 2x
                 "
                 type="image/png"
               />
@@ -66,8 +68,8 @@ function makeModal({
             <picture>
               <source
                 srcset="
-                  ./images/modal/_book.png 1x,
-                  ./images/modal/_book-retina.png 2x
+                  ../images/modal/_book.png 1x,
+                  ../images/modal/_book-retina.png 2x
                 "
                 type="image/png"
               />
@@ -78,9 +80,9 @@ function makeModal({
                 aria-label="Amazon"
               >
                 <img
-                  class="modal-amazon"
+                  class="modal-apple"
                   src="./images/modal/_book.png"
-                  alt="Amazon"
+                  alt="Apple"
                   width="62"
                   height="19"
                   loading="lazy"
@@ -109,4 +111,6 @@ document.addEventListener('keydown', (e) => {
 
 overlay.addEventListener('click', () =>  {
     closeModal();
-  });
+});
+
+export { result };
