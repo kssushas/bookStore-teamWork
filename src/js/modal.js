@@ -113,5 +113,5 @@ overlay.addEventListener('click', () =>  {
     closeModal();
 });
 
-export {result};
+export { result };
 // 
