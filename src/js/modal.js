@@ -3,7 +3,7 @@ import { checkLocaleStorage } from './localeStorage';
 
 
 
-export {result};
+
 
 const modal = document.querySelector('.modal-field');
 const picture = document.querySelector('.js-modal-picture');
@@ -114,4 +114,3 @@ overlay.addEventListener('click', () =>  {
 });
 
 export { result };
-// 
