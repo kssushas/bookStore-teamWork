@@ -84,6 +84,7 @@
   line-height: 1.19;
   letter-spacing: -1.28px;
 }
+
 .js-markup-category {
   color: var(--light-tx-cl);
   font-size: 14px;
@@ -101,7 +102,7 @@
   /* Олександр */
 }
 .js-list-card {
-  width: 335px;
+  /* width: 335px; */
 }
 /* .js-list-text {
 
@@ -176,16 +177,24 @@
   .js-markup-list {
     flex-direction: row;
     gap: 25px;
+    flex-wrap: wrap;
   }
   .js-list-card {
-    width: 218px;
+   flex-basis: calc((100% - 2 * 25px) / 3);
   }
   .js-list-img {
     width: 218px;
     height: 316px;
   }
 }
-
+@media (min-width: 768px) and (max-width: 1024px) {
+  .js-list-card {
+    display: none; 
+  }
+  .js-list-card:nth-child(-n+3) {
+    display: block; 
+  }
+}
 @media screen and (min-width: 1280px) {
   .wrapper {
     padding: 40px 0px 72px 0px;
@@ -207,7 +216,10 @@
   }
 
   .js-list-card {
-    width: 180px;
+    flex-basis: calc((100% - 4 * 24px) / 5);
+  }
+  .js-list-card {
+    display: inline-block;
   }
   .js-list-img {
     width: 180px;
@@ -216,8 +228,17 @@
 
   .js-markup-list {
     gap: 24px;
+    flex-wrap: wrap;
   }
   .js-markup-category {
     margin-top: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .js-list-card {
+    display: none;
+  }
+  .js-list-card:first-child {
+    display: block;
   }
 }
