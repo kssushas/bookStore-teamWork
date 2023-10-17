@@ -1,4 +1,4 @@
-import { result} from './modal';
+import { result } from './modal';
 export { checkLocaleStorage };
 
 const addBtn = document.querySelector('.js-modal-btn');
@@ -38,7 +38,7 @@ removeBtn.addEventListener('click', () => {
 function checkLocaleStorage(currentBook) {
   const takeBook = JSON.parse(localStorage.getItem('books'));
   const find = takeBook.find(element => element._id === currentBook._id);
- 
+
   if (takeBook.length === 0 || !find) {
     addBtn.style.display = 'block';
     removeBtn.style.display = 'none';
@@ -48,7 +48,4 @@ function checkLocaleStorage(currentBook) {
   addBtn.style.display = 'none';
   removeBtn.style.display = 'block';
   addBook.style.display = 'block';
-
 }
-
-

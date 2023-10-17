@@ -1,5 +1,7 @@
 .support-container {
   margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   max-width: 335px;
   min-height: 460px;
@@ -95,6 +97,7 @@
   .support-container {
     min-width: 356px;
     margin-top: 40px;
+    margin-left: 24px;
   }
 
   .wrapper-top {
