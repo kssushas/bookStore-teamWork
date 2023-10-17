@@ -29,7 +29,7 @@ body.theme-dark .shopping-cart {
 body.theme-dark .wrapper {
   background-color: var(--dark-bg-cl);
 }
-body.theme-dark .list-Elem{
+body.theme-dark .list-Elem {
   color: var(--orange-bg-cl);
 }
 body.theme-dark .list-elem {
@@ -65,6 +65,9 @@ body.theme-dark .modal-field {
 body.theme-dark .modal-icon {
   stroke: var(--white-bg-cl);
 }
+body.theme-dark .modal-icon:hover {
+  stroke: var(--violet-bg-cl);
+}
 body.theme-dark .modal-title {
   color: var(--white-bg-cl);
 }
@@ -84,8 +87,12 @@ body.theme-dark .modal-apple:hover {
   filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
 }
 body.theme-dark .modal-btn {
-  background-color: var(--black-bg-cl);
+  background-color: var(--dark-bg-cl);
   color: var(--white-bg-cl);
+}
+body.theme-dark .modal-btn:hover,
+body.theme-dark .modal-btn:focus {
+  background-color: var(--violet-bg-cl);
 }
 body.theme-dark .modal-add {
   color: var(--white-bg-cl);
