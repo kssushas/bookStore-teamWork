@@ -112,5 +112,6 @@ document.addEventListener('keydown', (e) => {
 overlay.addEventListener('click', () =>  {
     closeModal();
 });
-export { result};
 
+export {result};
+// 
