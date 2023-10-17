@@ -10,6 +10,70 @@
   }
 } */
 
+
+
+/* --------------------EMPTY SHOPING LIST---------------------------------- */
+
+.shoping-empty{
+  width: 265px;
+  height: 248px;
+  margin: 0 auto;
+}
+
+.shop-list-empty-text{
+  color: #00000099;  ;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: -0.02em;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.shopping-list-empty-img{
+  margin: 0 auto;
+  background-image: url('../img/shopping-list/shoping-img-bg-mob@1x.png');
+  width: 265px;
+  height: 198px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .shopping-list-empty-img {
+    background-image: url('../img/shopping-list/shoping-img-bg-mob@2x.png');
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .shoping-empty{
+    width: 349px;
+    height: 309px;
+  }
+  
+  .shop-list-empty-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .shopping-list-empty-img{
+      background-image: url('../img/shopping-list/shoping-img-bg-tab@1x.png');
+      width: 322px;
+       height: 241px;
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+      .shopping-list-empty-img {
+        background-image: url('../img/shopping-list/shoping-img-bg-tab@2x.png');
+        background-size: cover;
+      }
+    }
+}
+
+/* --------------------------------------------------------------------------- */
+
+
+
 .shopping-list-container {
   margin-top: 40px;
 }

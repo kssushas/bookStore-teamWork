@@ -1,0 +1,55 @@
+
+const listOfShopingBooks = document.querySelector('.js-shoping-list-book')
+const listOfBookFromCategory = document.querySelector('.listOfBookFromCategory')
+
+let takeBook = JSON.parse(localStorage.getItem('books'));
+checkShopingCard()
+
+listOfShopingBooks.addEventListener('click', clickOnRemoveBtn);
+
+
+function checkShopingCard() {
+   if(!takeBook || takeBook.length===0){
+   const empty = emptyShopping();
+   listOfBookFromCategory.innerHTML = empty;
+  listOfShopingBooks.style.display="none";
+   return;
+
+}
+
+listOfShopingBooks.style.display="flex";
+listOfShopingBooks.innerHTML= markupShoppingListCard(takeBook)
+
+}
+
+function clickOnRemoveBtn(e) {
+    if (e.target.tagName != 'BUTTON') return;
+    const bookToDelete = takeBook.findIndex(book => book._id === e.target.dataset.id);
+    takeBook.splice(bookToDelete,1)
+    localStorage.setItem('books', JSON.stringify(takeBook));
+    checkShopingCard()
+}
+
+function emptyShopping() {
+    return ` <div class="shoping-empty">
+      <p class="shop-list-empty-text">
+        This page is empty, add some books and proceed to order.
+      </p>
+      <div class="shopping-list-empty-img"></div></div>`;
+  }
+
+function markupShoppingListCard(value) {
+  return value
+    .map(e => {
+        return `
+               <li class ="shoping-books-item">
+                 <img src="${e.book_image}" alt="${e.title}" class="shopping-img-card">
+                 <div>
+                 <h2 class = "shopping-card-title">${e.title}</h2>
+                 <h3>${e.list_name}</h3>
+                 <p>${e.description}</p>
+                 <button type="button" data-id="${e._id}">remove</button>
+                 <h4>${e.author}</h4></div></li>`
+      
+    })
+    .join('')}
