@@ -1,5 +1,4 @@
 .overlay {
-
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -17,15 +16,11 @@
   visibility: hidden;
   box-sizing: border-box;
 
-  
-
   border: 2px solid var(--main-tx-cl);
   border-radius: 18px;
   background-color: var(--white-tx-cl);
   width: 335px;
   margin-bottom: 0;
-
-  
   padding: 40px 24px;
   position: fixed;
   max-height: 95%;
@@ -55,12 +50,8 @@
 }
 
 .modal-close {
-
   width: 24px;
   height: 24px;
-
-  
-
   position: absolute;
   top: 12px;
   right: 12px;
@@ -71,7 +62,6 @@
 
 @media only screen and (min-width: 768px) {
   .modal-close {
-
     width: 28px;
     height: 28px;
 
@@ -81,11 +71,8 @@
 }
 
 .modal-icon {
-
   width: 12px;
   height: 12px;
-
-  
 
   stroke: var(--black-bg-cl);
   display: inline-block;
@@ -93,7 +80,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -101,17 +87,12 @@
     width: 14px;
     height: 14px;
   }
-
 }
 .modal-icon:active,
 .modal-icon:hover,
 .modal-icon:focus {
   stroke: var(--violet-bg-cl);
-
-
 }
-
-
 
 .modal-content {
   display: flex;
@@ -138,7 +119,6 @@
 @media only screen and (min-width: 768px) {
   .modal-picture {
     margin-bottom: 0;
-
   }
 }
 
@@ -162,7 +142,6 @@
 
   line-height: 1.125;
   letter-spacing: -0.06em;
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -184,7 +163,6 @@
 
   letter-spacing: -0.08em;
   line-height: 1.16;
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -194,7 +172,6 @@
 
     letter-spacing: -0.06857em;
     line-height: 1.28;
-
   }
 }
 
@@ -205,14 +182,12 @@
 
   line-height: 1.28;
   letter-spacing: -0.06857;
-
 }
 
 @media only screen and (min-width: 768px) {
   .modal-description {
     width: 279px;
     margin-bottom: 20px;
-
   }
 }
 
@@ -223,21 +198,42 @@
 }
 
 .modal-amazon {
+  width: 62px;
+  height: 19px;
+  background-image: url('../img/modal/_amazon.png');
+  background-repeat: no-repeat;
+  background-size: 62px 19px;
+  background-position: center;
   filter: grayscale(100%);
 }
-
 .modal-amazon:hover {
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
 }
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .modal-amazon {
+    background-image: url('../img/modal/_amazon-retina.png');
+  }
+}
 .modal-apple {
+  width: 33px;
+  height: 32px;
+  background-image: url('../img/modal/_book.png');
+  background-size: 33px 32px;
   filter: grayscale(100%);
 }
 
 .modal-apple:hover {
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
-
 }
-
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .modal-apple {
+    background-image: url('../img/modal/_book-retina.png');
+  }
+}
 .modal-btn {
   height: 46px;
   margin: auto;
@@ -255,7 +251,6 @@
   margin-bottom: 0;
   background-color: var(--white-bg-cl);
   transition: color var(--anim-fast), background-color var(--anim-fast);
-
 }
 .modal-btn.remove {
   padding: 14px 23px;
@@ -298,4 +293,3 @@
     line-height: 1.16;
   }
 }
-

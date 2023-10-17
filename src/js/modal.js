@@ -1,10 +1,6 @@
 import { serviceModal } from './apisearch';
 import { checkLocaleStorage } from './localeStorage';
 
-
-
-
-
 const modal = document.querySelector('.modal-field');
 const picture = document.querySelector('.js-modal-picture');
 const modalInfo = document.querySelector('.js-modal-info');
@@ -40,56 +36,21 @@ function makeModal({
   const text = `<h2 class= "modal-title">${title}</h2>
         <h3 class="modal-author">${author}</h3>
         <p class="modal-description">${description}</p>
-        <div class="modal-icons">
-            <picture>
-              <source
-                srcset="
-                  ../images/modal/_amazon.png 1x,
-                  ../images/modal/_amazon-retina.png 2x
-                "
-                type="image/png"
-              />
-              <a
-                href="${amazon_product_url}"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Amazon"
-              >
-                <img
-                  class="modal-amazon"
-                  src="./images/modal/_amazon.png"
-                  alt="Amazon"
-                  width="62"
-                  height="19"
-                  loading="lazy"
-                />
-              </a>
-            </picture>
-            <picture>
-              <source
-                srcset="
-                  ../images/modal/_book.png 1x,
-                  ../images/modal/_book-retina.png 2x
-                "
-                type="image/png"
-              />
-              <a
-                href="${buy_links[1].url}"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Amazon"
-              >
-                <img
-                  class="modal-apple"
-                  src="./images/modal/_book.png"
-                  alt="Apple"
-                  width="62"
-                  height="19"
-                  loading="lazy"
-                />
-              </a>
-            </picture>
-            </div>`;
+        <div class="modal-icons"><a
+      class="modal-amazon"
+      href="${amazon_product_url}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Amazon"
+    >
+    </a><a
+      class="modal-apple"
+      href="${buy_links[1].url}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Apple"
+    >
+    </a></div>`;
 
   picture.insertAdjacentHTML('beforeend', content);
   modalInfo.insertAdjacentHTML('beforeend', text);
@@ -102,15 +63,14 @@ function closeModal() {
 }
 closeBtn.addEventListener('click', closeModal);
 
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === "Escape") {
-    closeModal(); 
-  }
-})
-
-overlay.addEventListener('click', () =>  {
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
     closeModal();
+  }
+});
+
+overlay.addEventListener('click', () => {
+  closeModal();
 });
 
 export { result };
