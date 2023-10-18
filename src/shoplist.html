@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./img/favicon-min.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping List</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,11 +24,20 @@
       </div> -->
 
     <load src="./partials/header.html" />
-    <load src="./partials/support.html" />
 
-    <ul class="js-shoping-list-book"></ul>
-    <div class="listOfBookFromCategory"></div>
+    <section class="shoplist">
+      <div class="container shoplist-container">
+        <aside><load src="./partials/support.html" /></aside>
 
+        <div class="shoplist-empty">
+          <h1 class="shoplist-header">
+            Shopping <span class="shoplist-header-span">List</span>
+          </h1>
+          <ul class="js-shoping-list-book"></ul>
+          <div class="listOfBookFromCategory"></div>
+        </div>
+      </div>
+    </section>
     <!-- <div class="modal"></div> -->
 
     <script type="module" src="./shoplist-main.js"></script>

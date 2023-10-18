@@ -1,14 +1,14 @@
-@import url('./allcategories.css');
+/* @import url('./allcategories.css'); */
 @import url('./anchor.css');
 @import url('./bestsellers.css');
 @import url('./header.css');
 @import url('./loader.css');
 @import url('./modal.css');
 @import url('./reset.css');
-@import url('./shoplist.css');
 @import url('./support-shopinglist.css');
+@import url('./shoplist.css');
 @import url('./theme-dark.css');
-@import url('./allcategorieslist.css');
+/* @import url('./allcategorieslist.css'); */
 
 :root {
   /* Fonts */
@@ -37,9 +37,10 @@ body {
   font-family: var(--primary-font);
   font-size: 18px;
   line-height: 1.33;
+  background-color: var(--light-bg-cl);
 }
 .container {
-  width: 100%;
+  /* width: 100%; */
   max-width: 375px;
   padding-left: 20px;
   padding-right: 20px;
