@@ -45,15 +45,21 @@ function markupShoppingListCard(value) {
                <li class ="shoping-books-item">
                  <img src="${e.book_image}" alt="${e.title}" class="shopping-img-card">
                  <div>
-                  <svg class="shopping-card-button" data-id="${e._id}" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                   <ellipse cx="14" cy="14" rx="14" ry="14" fill="#4F2EE8"/><use href="/img/sprite.svg#icon-trash"></use>
-                 </svg>
+                  <button type="button" class="shopping-card-button js-modal-remove-btn">
+                  <svg class="shopping-card-icon" data-id="${e._id}">
+                 <use href="../img/sprite.svg#icon-trash">
+                </svg></button>
                  <h2 class = "shopping-card-title">${e.title}</h2>
                 
                  <h3 class="shopping-card-list-name">${e.list_name}</h3>
                  <p class="shopping-card-description">${e.description}</p>
                  
-                 <p class="shopping-card-autor">${e.author}</p></div></li>`;
+                 <p class="shopping-card-autor">${e.author}</p></div>
+                 <div class="shop-list-icons"><a class="modal-amazon"></a></a>
+                <a class="modal-apple">
+                </a></div>
+                </li>
+                 `;
     })
     .join('');
 }
