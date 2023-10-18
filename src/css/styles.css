@@ -5,7 +5,7 @@
 @import url('./loader.css');
 @import url('./modal.css');
 @import url('./reset.css');
-@import url('./shoplist.css');
+/* @import url('./shoplist.css'); */
 @import url('./support.css');
 @import url('./theme-dark.css');
 @import url('./allcategorieslist.css');
@@ -37,8 +37,9 @@ body {
   font-family: var(--primary-font);
   font-size: 18px;
   line-height: 1.33;
+  background-color: var(--light-bg-cl);
 }
-.no-scroll{
+.no-scroll {
   overflow: hidden;
 }
 .container {
