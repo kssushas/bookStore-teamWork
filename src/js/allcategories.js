@@ -77,7 +77,7 @@ function markupTopFive(category, arrBook) {
     `<div>
        <h3 class="js-markup-category">${category}</h3>
        <ul class="js-markup-list">${book}</ul>
-       <div class="js-button-more"><button class="js-see-more">See more</button></div>
+       <div class="js-button-more"><button class="js-see-more" data-target="${category}">See more</button></div>
      </div>`
   );
 }
@@ -97,6 +97,7 @@ topFive();
 listOfBookFromCategory.addEventListener('click', e => {
   const touch = e.target.closest('li');
   const touchId = touch.dataset.id;
+  console.log(touchId);
   forModal(touchId);
 });
 
@@ -131,3 +132,32 @@ function tabClick(evt) {
 }
 
 list.addEventListener('click', tabClick);
+// ---------------------------------------------------------- //
+
+listOfBookFromCategory.addEventListener('click', e => {
+  const targetButton = e.target.closest('button');
+  console.log(targetButton);
+  const dataTargetValue = targetButton.dataset.target;
+  console.log(dataTargetValue);
+  booksOfCurrentCategory(dataTargetValue).then(data => {
+    console.log(data);
+    const markupListBook = markupBookOfcategory(data);
+    listOfBookFromCategory.innerHTML = markupListBook;
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+  // // ================
+  // tabClick(e)
+  // console.log(e)
+  // // ================

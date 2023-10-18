@@ -6,7 +6,13 @@ const removeBtn = document.querySelector('.js-modal-remove-btn');
 const addBook = document.querySelector('.js-modal-add');
 
 let arrayOfChosenBooks = [];
-localStorage.setItem('books', JSON.stringify(arrayOfChosenBooks));
+
+if (
+  localStorage.getItem('books') &&
+  localStorage.getItem('books').length === 0
+) {
+  localStorage.setItem('books', JSON.stringify(arrayOfChosenBooks));
+}
 
 function addToShopingList(result) {
   arrayOfChosenBooks.push(result);
