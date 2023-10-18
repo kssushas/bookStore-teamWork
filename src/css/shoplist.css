@@ -37,13 +37,13 @@
 }
 /* ======================== */
 .js-shoping-list-book {
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 40px;
   gap: 20px;
 }
 .shoping-books-item {
-  width: 335px;
+  width: 100%;
   height: 170px;
   display: flex;
   border-radius: 16px;
@@ -120,8 +120,12 @@
   .listOfBookFromCategory {
     margin-top: 120px;
   }
+  .js-shoping-list-book{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .shoping-books-item {
-    width: 704px;
+    width: 100%;
     height: 213px;
   }
   .shopping-img-card {
@@ -152,10 +156,12 @@
   .shoplist-empty {
     margin: 40px 0 0 40px;
   }
-  .shoping-books-item {
+ 
+  /* .shoping-books-item {
+    flex-basis: calc((100% - 0 * 20px) / 1);
     width: 996px;
     height: 213px;
-  }
+  } */
   .shopping-card-description {
     text-overflow: ellipsis;
     width: 508px;

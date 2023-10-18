@@ -64,5 +64,5 @@ body {
 }
 
 body.theme-dark {
-  background-color: var(--main-tx-cl);
+  background-color: var(--dark-bg-cl);
 }

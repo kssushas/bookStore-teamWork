@@ -97,3 +97,15 @@ body.theme-dark .modal-btn:focus {
 body.theme-dark .modal-add {
   color: var(--white-bg-cl);
 }
+body.theme-dark .shoplist-header{
+  color: var(--white-bg-cl);
+}
+body.theme-dark .shoping-books-item{
+  background-color: var(--main-tx-cl);
+}
+body.theme-dark .shopping-card-title{
+  color: var(--white-bg-cl);
+}
+body.theme-dark .shopping-card-description{
+  color: var(--white-bg-cl);
+}

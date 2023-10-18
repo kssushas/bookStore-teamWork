@@ -56,18 +56,37 @@ function setTheme(isDark) {
 function applyLightTheme() {
   document.body.classList.remove('theme-dark');
   mobileMenu.classList.remove('theme-dark');
-  modal.classList.remove('theme-dark')
+  if(modal){
+    modal.classList.remove('theme-dark');
+  }
   localStorage.setItem('selectedTheme', 'light');
   
 }
 
 //*MODAL
+
+
 function applyDarkTheme() {
   document.body.classList.add('theme-dark');
   mobileMenu.classList.add('theme-dark');
   localStorage.setItem('selectedTheme', 'dark');
   if (document.body.classList.contains('theme-dark')) {
-    modal.classList.add('theme-dark');
+    if(modal){
+      modal.classList.add('theme-dark');
+    }
+    
   }
   
 }
+const currentURL = window.location.href;
+
+// Получаем все ссылки в меню
+const links = document.querySelectorAll('#menu a');
+
+// Проходим по каждой ссылке и проверяем, соответствует ли её href текущему URL
+links.forEach(link => {
+  if (link.href === currentURL) {
+    // Если да, добавляем класс "current" к этой ссылке
+    link.classList.add('current');
+  }
+});
