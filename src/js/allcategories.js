@@ -74,7 +74,7 @@ function markupTopFive(category, arrBook) {
 
   listOfBookFromCategory.insertAdjacentHTML(
     'beforeend',
-    `<div>
+    `<div class="js-markup-block">
        <h3 class="js-markup-category">${category}</h3>
        <ul class="js-markup-list">${book}</ul>
        <div class="js-button-more"><button class="js-see-more" data-target="${category}">See more</button></div>
@@ -146,18 +146,7 @@ listOfBookFromCategory.addEventListener('click', e => {
   });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-  // // ================
-  // tabClick(e)
-  // console.log(e)
-  // // ================
+// // ================
+// tabClick(e)
+// console.log(e)
+// // ================

@@ -25,7 +25,6 @@
 .listOfBookFromCategory {
   display: flex;
   flex-wrap: wrap;
-  /* width: 335px; */
   max-width: 100%;
 }
 
@@ -53,9 +52,8 @@
 
 .js-list {
   width: 307px;
-  /* Олександр */
-  /* margin-left: 24px; */
-  /* Олександр */
+  height: 228px;
+  overflow-y: scroll;
 }
 .list-elem {
   color: rgba(17, 17, 17, 0.6);
@@ -90,13 +88,15 @@
   letter-spacing: -1.28px;
 }
 
+.js-markup-block {
+  margin-top: 40px;
+}
 .js-markup-category {
   color: var(--light-tx-cl);
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: 0.42px;
   text-transform: uppercase;
-  margin-top: 40px;
 }
 .js-markup-list {
   display: flex;
@@ -149,6 +149,7 @@
 
   .js-list {
     width: 309px;
+    height: 472px;
   }
 
   .sidebar {
@@ -209,7 +210,6 @@
     display: flex;
     flex-direction: column;
     width: 328px;
-    /* gap: 32px; */
   }
   .listOfBookFromCategory {
     margin-top: 40px;
