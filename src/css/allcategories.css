@@ -175,7 +175,7 @@
   }
   .listOfBookFromCategory {
     /* width: 704px; */
-    gap: 25px;
+    gap: 24px;
   }
   .js-markup-category {
     line-height: 1.71;
@@ -214,7 +214,7 @@
   .listOfBookFromCategory {
     margin-top: 40px;
     /* width: 996px; */
-    gap: 40px;
+    /* gap: 40px; */
   }
   .top-list {
     padding: 0px 24px 72px 40px;
@@ -225,6 +225,7 @@
   }
   .js-list-card {
     display: inline-block;
+    margin-top: 40px;
   }
   .js-list-img {
     width: 180px;
