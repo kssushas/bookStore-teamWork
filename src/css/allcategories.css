@@ -25,7 +25,6 @@
 .listOfBookFromCategory {
   display: flex;
   flex-wrap: wrap;
-  /* width: 335px; */
   max-width: 100%;
 }
 
@@ -53,15 +52,22 @@
 
 .js-list {
   width: 307px;
-  /* Олександр */
-  margin-left: 24px;
-  /* Олександр */
+  height: 228px;
+  overflow-y: scroll;
 }
 .list-elem {
   color: rgba(17, 17, 17, 0.6);
   font-size: 16px;
   line-height: 1.13;
   letter-spacing: -0.32px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+.list-elem:first-child {
+  padding-top: 0px;
+}
+.list-elem:last-child {
+  padding-bottom: 0px;
 }
 .top-list {
   padding: 40px 0px 80px 0px;
@@ -82,13 +88,15 @@
   letter-spacing: -1.28px;
 }
 
+.js-markup-block {
+  margin-top: 40px;
+}
 .js-markup-category {
   color: var(--light-tx-cl);
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: 0.42px;
   text-transform: uppercase;
-  margin-top: 40px;
 }
 .js-markup-list {
   display: flex;
@@ -141,6 +149,7 @@
 
   .js-list {
     width: 309px;
+    height: 472px;
   }
 
   .sidebar {
@@ -166,7 +175,7 @@
   }
   .listOfBookFromCategory {
     /* width: 704px; */
-    gap: 25px;
+    gap: 24px;
   }
   .js-markup-category {
     line-height: 1.71;
@@ -201,12 +210,11 @@
     display: flex;
     flex-direction: column;
     width: 328px;
-    gap: 32px;
   }
   .listOfBookFromCategory {
     margin-top: 40px;
     /* width: 996px; */
-    gap: 40px;
+    /* gap: 40px; */
   }
   .top-list {
     padding: 0px 24px 72px 40px;
@@ -217,6 +225,7 @@
   }
   .js-list-card {
     display: inline-block;
+    margin-top: 40px;
   }
   .js-list-img {
     width: 180px;

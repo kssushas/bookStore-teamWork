@@ -75,7 +75,7 @@
 @media screen and (min-width: 768px) {
   .support-container {
     min-width: 335px;
-    min-height: 474px;
+    max-height: 474px;
     margin-top: 0px;
   }
 
@@ -97,7 +97,7 @@
   .support-container {
     min-width: 356px;
     margin-top: 40px;
-    margin-left: 24px;
+    /* margin-left: 24px; */
   }
 
   .wrapper-top {
