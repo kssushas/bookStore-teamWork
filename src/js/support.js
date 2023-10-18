@@ -1,6 +1,3 @@
-/project_12/assets/project-hope@x2.png
-
-
 const supports = [
   {
     title: 'Save the Children',
