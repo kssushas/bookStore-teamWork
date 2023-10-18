@@ -101,9 +101,9 @@
   flex-wrap: wrap;
   /* Олександр */
 }
-.js-list-card {
-  /* width: 335px; */
-}
+/* .js-list-card { */
+/* width: 335px; */
+/* } */
 /* .js-list-text {
 
 } */
@@ -180,7 +180,7 @@
     flex-wrap: wrap;
   }
   .js-list-card {
-   flex-basis: calc((100% - 2 * 25px) / 3);
+    flex-basis: calc((100% - 2 * 25px) / 3);
   }
   .js-list-img {
     width: 218px;
@@ -189,10 +189,10 @@
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .js-list-card {
-    display: none; 
+    display: none;
   }
-  .js-list-card:nth-child(-n+3) {
-    display: block; 
+  .js-list-card:nth-child(-n + 3) {
+    display: block;
   }
 }
 @media screen and (min-width: 1280px) {
