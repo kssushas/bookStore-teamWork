@@ -80,7 +80,7 @@ export async function topFive() {
 //===========================================================//
 
 // function markupAllCategories() {
-//   return `     <li class="list-Elem" data-target="All categories">All categories</li> 
+//   return `     <li class="list-Elem" data-target="All categories">All categories</li>
 // `;
 // }
 // // console.log(markupAllCategories())
