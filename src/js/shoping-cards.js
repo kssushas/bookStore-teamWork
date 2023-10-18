@@ -46,7 +46,7 @@ function markupShoppingListCard(value) {
                  <img src="${e.book_image}" alt="${e.title}" class="shopping-img-card">
                  <div>
                   <svg class="shopping-card-button" data-id="${e._id}" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                   <ellipse cx="14" cy="14" rx="14" ry="14" fill="#4F2EE8"/>
+                   <ellipse cx="14" cy="14" rx="14" ry="14" fill="#4F2EE8"/><use href="/img/sprite.svg#icon-trash"></use>
                  </svg>
                  <h2 class = "shopping-card-title">${e.title}</h2>
                 

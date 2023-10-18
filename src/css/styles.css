@@ -43,7 +43,6 @@ body {
   overflow: hidden;
 }
 .container {
-  /* width: 100%; */
   max-width: 375px;
   padding-left: 20px;
   padding-right: 20px;
@@ -67,5 +66,5 @@ body {
 }
 
 body.theme-dark {
-  background-color: var(--main-tx-cl);
+  background-color: var(--dark-bg-cl);
 }
