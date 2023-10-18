@@ -7,7 +7,10 @@ const addBook = document.querySelector('.js-modal-add');
 
 let arrayOfChosenBooks = [];
 
-if (localStorage.getItem('books').length === 0) {
+if (
+  localStorage.getItem('books') &&
+  localStorage.getItem('books').length === 0
+) {
   localStorage.setItem('books', JSON.stringify(arrayOfChosenBooks));
 }
 
