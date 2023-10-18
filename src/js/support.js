@@ -50,7 +50,7 @@ const supports = [
   {
     title: 'UNITED24',
     url: 'https://u24.gov.ua/uk',
-    img: '../img/support/united24@x2.png',
+    img: '../img/support/uni24.png',
     width: '114',
   },
 ];
