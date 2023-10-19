@@ -42,16 +42,18 @@ removeBtn.addEventListener('click', () => {
 
 // let takeBook=null;
 function checkLocaleStorage(currentBook) {
-  const takeBook = JSON.parse(localStorage.getItem('books'));
-  const find = takeBook.find(element => element._id === currentBook._id);
-
-  if (takeBook.length === 0 || !find) {
-    addBtn.style.display = 'block';
-    removeBtn.style.display = 'none';
-    addBook.style.display = 'none';
-    return;
-  }
-  addBtn.style.display = 'none';
-  removeBtn.style.display = 'block';
-  addBook.style.display = 'block';
-}
+  if (localStorage.getItem('books') && localStorage.getItem('books').length > 0) {
+      const takeBook = JSON.parse(localStorage.getItem('books'));
+       const find = takeBook.find(element => element._id === currentBook._id);
+    
+        if (find) {
+          addBtn.style.display = 'none';
+          removeBtn.style.display = 'block';
+          addBook.style.display = 'block';
+        } else {
+          addBtn.style.display = 'block';
+          removeBtn.style.display = 'none';
+          addBook.style.display = 'none';
+      }
+      }
+    }
