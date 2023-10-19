@@ -38,10 +38,52 @@ function emptyShopping() {
       <div class="shopping-list-empty-img"></div></div>`;
 }
 
+// function markupShoppingListCard(value) {
+//   return value
+//     .map(e => {
+//       return `
+//                <li class ="shoping-books-item">
+//                  <img src="${e.book_image}" alt="${e.title}" class="shopping-img-card">
+//                  <div>
+//                   <svg class="shopping-card-button" data-id="${e._id}" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+//                    <ellipse cx="14" cy="14" rx="14" ry="14" fill="#4F2EE8"/><use href="/img/sprite.svg#icon-trash"></use>
+//                  </svg>
+//                  <h2 class = "shopping-card-title">${e.title}</h2>
+                
+//                  <h3 class="shopping-card-list-name">${e.list_name}</h3>
+//                  <p class="shopping-card-description">${e.description}</p>
+                 
+//                  <p class="shopping-card-autor">${e.author}</p></div></li>`;
+//     })
+//     .join('');
+// }
 function markupShoppingListCard(value) {
   return value
     .map(e => {
       return `
+
+               <li class="shoping-books-item">
+  <img src="${e.book_image}" alt="${e.title}" class="shopping-img-card">
+  <div>
+    <button type="button" class="shopping-card-button js-modal-remove-btn">
+      <svg class="shopping-card-icon" data-id="${e._id}">
+        <use href="../img/sprite.svg#icon-trash">
+      </svg></button>
+    <h2 class="shopping-card-title">${e.title}</h2>
+
+    <h3 class="shopping-card-list-name">${e.list_name}</h3>
+    <p class="shopping-card-description">${e.description}</p>
+
+    <div class="shopping-card-footer">
+      <p class="shopping-card-autor">${e.author}</p>
+      <div class="shop-list-icons"><a class="modal-amazon"></a></a>
+        <a class="modal-apple">
+        </a>
+      </div>
+    </div>
+  </div>
+</li>
+
                <li class ="shoping-books-item">
                  <img src="${e.book_image}" alt="${e.title}" class="shopping-img-card">
                  <div>
@@ -59,6 +101,7 @@ function markupShoppingListCard(value) {
                 <a class="modal-apple">
                 </a></div>
                 </li>
+
                  `;
     })
     .join('');
