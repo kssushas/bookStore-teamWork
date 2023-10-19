@@ -1,4 +1,12 @@
 import saveChildrenImg from '/img/support/save-the-children@x2.png';
+import projectHopeImg from '/img/support/project-hope@x2.png';
+import internationalMedicalImg from '/img/support/international-medical-corps@x2.png';
+import razomImg from '/img/support/razom@x2.png';
+import actionAgainstImg from '/img/support/action-against-hunger@x2.png';
+import sergiyPrytulaImg from '/img/support/sergiy-prytula@x2.png';
+import medecinsFrontiresImg from '/img/support/medecins-sans-frontires@x2.png';
+import worldVisionImg from '/img/support/world-vision@x2.png';
+import uniImg from '/img/support/uni24.png';
 
 const supports = [
   {
@@ -10,49 +18,49 @@ const supports = [
   {
     title: 'Project HOPE',
     url: 'https://www.projecthope.org/country/ukraine/',
-    img: '../img/support/project-hope@x2.png',
+    img: projectHopeImg,
     width: '62',
   },
   {
     title: 'International Medical Corps',
     url: 'https://internationalmedicalcorps.org/country/ukraine/',
-    img: '../img/support/international-medical-corps@x2.png',
+    img: internationalMedicalImg,
     width: '101',
   },
   {
     title: 'RAZOM',
     url: 'https://www.razomforukraine.org/',
-    img: '../img/support/razom@x2.png',
+    img: razomImg,
     width: '82',
   },
   {
     title: 'Action against hunger',
     url: 'https://www.actionagainsthunger.org/location/europe/ukraine/',
-    img: '../img/support/action-against-hunger@x2.png',
+    img: actionAgainstImg,
     width: '55',
   },
   {
     title: 'Serhiy Prytula Charity Foundation',
     url: 'https://prytulafoundation.org/en',
-    img: '../img/support/sergiy-prytula@x2.png',
+    img: sergiyPrytulaImg,
     width: '115',
   },
   {
     title: 'Medicins Sans Frontieres',
     url: 'https://www.msf.org/ukraine',
-    img: '../img/support/medecins-sans-frontires@x2.png',
+    img: medecinsFrontiresImg,
     width: '102',
   },
   {
     title: 'World vision',
     url: 'https://www.wvi.org/emergencies/ukraine',
-    img: '../img/support/world-vision@x2.png',
+    img: worldVisionImg,
     width: '81',
   },
   {
     title: 'UNITED24',
     url: 'https://u24.gov.ua/uk',
-    img: '../img/support/uni24.png',
+    img: uniImg,
     width: '114',
   },
 ];
