@@ -73,8 +73,14 @@ function markupShoppingListCard(value) {
     <p class="shopping-card-description">${e.description}</p>
     <div class="shopping-card-footer">
       <p class="shopping-card-autor">${e.author}</p>
-      <div class="shop-list-icons"><a class="shopplist-amazon"></a></a>
-        <a class="shopplist-apple">
+      <div class="shop-list-icons"><a class="shopplist-amazon" href="${e.amazon_product_url}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Amazon"></a></a>
+        <a class="shopplist-apple" href="${e.buy_links[1].url}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Apple">
         </a>
       </div>
     </div> 

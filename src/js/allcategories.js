@@ -1,11 +1,8 @@
-import axios from 'axios';
 
 import { forModal } from './modal';
 
 import { makeList, booksOfCurrentCategory, topFive } from './apisearch';
 const list = document.querySelector('.js-list');
-
-axios.defaults.baseURL = 'https://books-backend.p.goit.global/books/';
 
 makeList().then(data => {
   const categoryNameForList = data.map(val => {
