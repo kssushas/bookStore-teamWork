@@ -1,8 +1,10 @@
+import saveChildrenImg from '/img/support/save-the-children@x2.png';
+
 const supports = [
   {
     title: 'Save the Children',
     url: 'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
-    img: '../img/support/save-the-children@x2.png',
+    img: saveChildrenImg,
     width: '131',
   },
   {
