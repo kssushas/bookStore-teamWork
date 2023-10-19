@@ -130,25 +130,29 @@ function tabClick(evt) {
   evt.target.classList.add('chose');
   // console.log(evt.target);
 }
-list.addEventListener('click', tabClick);
+
+
 // ---------------------------------------------------------- //
 
 listOfBookFromCategory.addEventListener('click', e => {
+  // =======
+
   list.addEventListener('click', tabClick);
   // ---------------------------------------------------------- //
 
   listOfBookFromCategory.addEventListener('click', e => {
-    const targetButton = e.target.closest('button');
-    console.log(targetButton);
-    const dataTargetValue = targetButton.dataset.target;
-    console.log(dataTargetValue);
-    booksOfCurrentCategory(dataTargetValue).then(data => {
-      const markupListBook = markupBookOfcategory(data);
-      listOfBookFromCategory.innerHTML = markupListBook;
-    });
+
+  const targetButton = e.target.closest('button');
+  console.log(targetButton);
+  const dataTargetValue = targetButton.dataset.target;
+  console.log(dataTargetValue);
+  booksOfCurrentCategory(dataTargetValue).then(data => {
+    const markupListBook = markupBookOfcategory(data);
+    listOfBookFromCategory.innerHTML = markupListBook;
   });
 
   console.log(data);
   const markupListBook = markupBookOfcategory(data);
   listOfBookFromCategory.innerHTML = markupListBook;
 });
+})
