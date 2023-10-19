@@ -50,6 +50,7 @@
   border: 2px solid rgba(79, 46, 232, 0.4);
   background: var(--white-bg-cl);
   position: relative;
+  /* padding: 30px 24px; */
 }
 .shopping-img-card {
   width: 100px;
@@ -96,7 +97,6 @@
 
 } */
 
-
 .shopping-card-button {
   width: 28px;
   height: 28px;
@@ -105,17 +105,16 @@
   right: 14px;
   top: 14px;
   border-radius: 50%;
-
-  border-radius: 50%;
+  /* 
+  border-radius: 50%; */
 }
- 
-.shopping-card-icon{
-width: 12px;
-height: 12px;
-position: absolute;
-right: 6px;
-top: 6px;
 
+.shopping-card-icon {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 6px;
+  top: 6px;
 }
 
 .shopping-card-icon {
@@ -140,20 +139,55 @@ top: 6px;
   justify-content: space-between;
   align-items: flex-end;
 
-.shop-list-icons{
-  display: flex;
-  gap: 16px;
-  align-self: flex-end;
-}
-
-
+  .shop-list-icons {
+    display: flex;
+    gap: 16px;
+    align-self: flex-end;
+  }
 }
 .shop-list-icons {
   display: flex;
   gap: 16px;
   align-items: center;
   /* align-self: flex-end; */
-} 
+}
+.shopplist-amazon {
+  width: 48px;
+  height: 15px;
+  background-image: url('../img/modal/_amazon.png');
+  background-repeat: no-repeat;
+  background-size: 48px 15px;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.shopplist-amazon:hover {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .shopplist-amazon {
+    background-image: url('../img/modal/_amazon-retina.png');
+  }
+}
+.shopplist-apple {
+  width: 28px;
+  height: 27px;
+  background-image: url('../img/modal/_book.png');
+  background-size: 28px 27px;
+  filter: grayscale(100%);
+}
+.shopplist-apple:hover {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .shopplist-apple {
+    background-image: url('../img/modal/_book-retina.png');
+  }
+}
 @media screen and (min-width: 768px) {
   .shoplist-header {
     font-size: 48px;
@@ -180,7 +214,7 @@ top: 6px;
     height: 165px;
     margin: 24px;
   }
-.shopping-card-title {
+  .shopping-card-title {
     margin-top: 24px;
   }
   .shopping-card-description {
