@@ -74,7 +74,7 @@ function markupTopFive(category, arrBook) {
 
   listOfBookFromCategory.insertAdjacentHTML(
     'beforeend',
-    `<div>
+    `<div class="js-markup-block">
        <h3 class="js-markup-category">${category}</h3>
        <ul class="js-markup-list">${book}</ul>
        <div class="js-button-more"><button class="js-see-more" data-target="${category}">See more</button></div>
@@ -94,12 +94,6 @@ topFive();
 
 //---------------------------------------------------------------//
 
-listOfBookFromCategory.addEventListener('click', e => {
-  const touch = e.target.closest('li');
-  const touchId = touch.dataset.id;
-  console.log(touchId);
-  forModal(touchId);
-});
 
 // ==================================================
 
@@ -128,36 +122,25 @@ function tabClick(evt) {
     listTabs[i].classList.remove('chose');
   }
   evt.target.classList.add('chose');
-  console.log(evt.target);
+  // console.log(evt.target);
 }
 
 list.addEventListener('click', tabClick);
 // ---------------------------------------------------------- //
-
-listOfBookFromCategory.addEventListener('click', e => {
+// НЕ ЧІПАТИ!!!!!
+listOfBookFromCategory.addEventListener('click', handlerClick);
+function handlerClick(e) {
+  const touch = e.target.closest('li');
   const targetButton = e.target.closest('button');
-  console.log(targetButton);
-  const dataTargetValue = targetButton.dataset.target;
-  console.log(dataTargetValue);
-  booksOfCurrentCategory(dataTargetValue).then(data => {
-    console.log(data);
+  if (touch) {
+    const touchId = touch.dataset.id;
+     forModal(touchId);
+  }
+  if (targetButton) {
+    const dataTargetValue = targetButton.dataset.target;
+     booksOfCurrentCategory(dataTargetValue).then(data => {
     const markupListBook = markupBookOfcategory(data);
     listOfBookFromCategory.innerHTML = markupListBook;
-  });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-  // // ================
-  // tabClick(e)
-  // console.log(e)
-  // // ================
+  })
+  }
+}
