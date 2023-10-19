@@ -1,12 +1,12 @@
-import saveChildrenImg from './img/support/save-the-children@x2.png';
-import projectHopeImg from './img/support/project-hope@x2.png';
-import internationalMedicalImg from './img/support/international-medical-corps@x2.png';
-import razomImg from './img/support/razom@x2.png';
-import actionAgainstImg from './img/support/action-against-hunger@x2.png';
-import sergiyPrytulaImg from './img/support/sergiy-prytula@x2.png';
-import medecinsFrontiresImg from './img/support/medecins-sans-frontires@x2.png';
-import worldVisionImg from './img/support/world-vision@x2.png';
-import uniImg from './img/support/uni24.png';
+import saveChildrenImg from '/img/support/save-the-children@x2.png';
+import projectHopeImg from '/img/support/project-hope@x2.png';
+import internationalMedicalImg from '/img/support/international-medical-corps@x2.png';
+import razomImg from '/img/support/razom@x2.png';
+import actionAgainstImg from '/img/support/action-against-hunger@x2.png';
+import sergiyPrytulaImg from '/img/support/sergiy-prytula@x2.png';
+import medecinsFrontiresImg from '/img/support/medecins-sans-frontires@x2.png';
+import worldVisionImg from '/img/support/world-vision@x2.png';
+import uniImg from '/img/support/uni24.png';
 
 const supports = [
   {
