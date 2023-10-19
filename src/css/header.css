@@ -257,10 +257,6 @@ input:checked + .slider:before {
     letter-spacing: -0.56px;
     transition: box-shadow var(--anim-афіе);
   
-  .sign-btn:hover,
-  .sign-btn:focus {
-    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.15);
-  }
 }
 
 @media screen and (min-width: 1280px) {

@@ -78,6 +78,7 @@ function applyDarkTheme() {
   }
   
 }
+
 const currentURL = window.location.href;
 
 const links = document.querySelectorAll('#menu a');
@@ -87,3 +88,4 @@ links.forEach(link => {
     link.classList.add('current');
   }
 });
+
