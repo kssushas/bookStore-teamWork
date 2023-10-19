@@ -134,7 +134,7 @@ function tabClick(evt) {
 // ---------------------------------------------------------- //
 
 listOfBookFromCategory.addEventListener('click', (e) => {
-=======
+
 
 list.addEventListener('click', tabClick);
 // ---------------------------------------------------------- //
@@ -156,7 +156,7 @@ listOfBookFromCategory.addEventListener('click', e => {
     const markupListBook = markupBookOfcategory(data);
     listOfBookFromCategory.innerHTML = markupListBook;
   });
-});
+
 
 
 
