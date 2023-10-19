@@ -80,13 +80,10 @@ function applyDarkTheme() {
 }
 const currentURL = window.location.href;
 
-// Получаем все ссылки в меню
 const links = document.querySelectorAll('#menu a');
 
-// Проходим по каждой ссылке и проверяем, соответствует ли её href текущему URL
 links.forEach(link => {
   if (link.href === currentURL) {
-    // Если да, добавляем класс "current" к этой ссылке
     link.classList.add('current');
   }
 });
