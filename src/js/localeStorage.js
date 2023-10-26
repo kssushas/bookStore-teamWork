@@ -40,7 +40,7 @@ removeBtn.addEventListener('click', () => {
   removeFromTheShopList(result);
 });
 
-// let takeBook=null;
+
 function checkLocaleStorage(currentBook) {
   if (localStorage.getItem('books') && localStorage.getItem('books').length > 0) {
       const takeBook = JSON.parse(localStorage.getItem('books'));
